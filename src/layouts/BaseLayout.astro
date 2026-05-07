@@ -21,6 +21,14 @@ const resolvedOgImage = ogImage || "https://legacydram.com/og-image.png";
     <title>{title}</title>
     <link rel="canonical" href={ogUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Google Analytics -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-D1351D30XH"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D1351D30XH');
+    </script>
     <meta property="og:title" content={title} />
     <meta property="og:description" content={ogDescription} />
     <meta property="og:image" content={resolvedOgImage} />
