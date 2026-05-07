@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<BaseLayout
+  title="About — LegacyDram"
+  description="LegacyDram is a curated whisky media for engineers. People-first biographies, craft chemistry, and tasting picks with reasoning."
+  lang="en"
+  ogUrl="https://legacydram.com/about/"
+  ogDescription="LegacyDram is a curated whisky media for engineers and the people who love a story behind a glass."
+>
+  <Nav lang="en" current="about" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.85rem; font-weight: 700; margin-bottom: 1.5rem;">About LegacyDram</h1>
+
+    <div style="line-height: 1.85; color: var(--text-secondary);">
+      <p style="margin-bottom: 1.25rem;">
+        LegacyDram is a curated whisky media for engineers and the people who love a story behind a glass. Instead of yet another tasting-note dump, the site studies whisky the way a craftsperson reads their own legacy code — by the decisions, the trade-offs shipped, and the people who shipped them.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">Editorial stance</h2>
+      <ul style="padding-left: 1.5rem; margin-bottom: 1.25rem;">
+        <li style="margin-bottom: 0.5rem;"><strong>People-first.</strong> Every bottle has a human whose decisions shaped it. We start there.</li>
+        <li style="margin-bottom: 0.5rem;"><strong>Engineering literacy.</strong> Chemistry, process, and trade-offs explained — not hand-waved.</li>
+        <li style="margin-bottom: 0.5rem;"><strong>No PR copy.</strong> No advertorials, no celebrity-distillery puff pieces, no "best whisky" listicles without reasoning.</li>
+      </ul>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">Why "LegacyDram"?</h2>
+      <p style="margin-bottom: 1.25rem;">
+        For an engineer, "legacy" is the word for code that has outlived its author and still shapes every decision today. For a whisky drinker, "dram" is the small pour you study before you finish the glass. LegacyDram lives where those two meanings meet — every bottle is a piece of legacy code, and every dram is a chance to read it.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">Author</h2>
+      <p style="margin-bottom: 1.25rem;">
+        Ken Imoto — software engineer, whisky enthusiast, and author of the Kindle/Zenn book series on LLM engineering and whisky cost-performance analysis. Profile and book catalog at <a href="https://kenimoto.dev" style="color: var(--link-color);">kenimoto.dev</a>.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">Publisher</h2>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted); width: 35%;">Company name</td>
+          <td style="padding: 0.6rem 0;">Propel-Lab LLC</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">Representative</td>
+          <td style="padding: 0.6rem 0;">Ken Imoto</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">Website</td>
+          <td style="padding: 0.6rem 0;"><a href="https://www.propel-lab.co.jp/" style="color: var(--link-color);">propel-lab.co.jp</a></td>
+        </tr>
+        <tr>
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">Contact</td>
+          <td style="padding: 0.6rem 0;"><a href="mailto:info@propel-lab.co.jp" style="color: var(--link-color);">info@propel-lab.co.jp</a></td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</BaseLayout>

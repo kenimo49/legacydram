@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+---
+
+<BaseLayout
+  title="このサイトについて — LegacyDram"
+  description="LegacyDramは、ウィスキーを人物の決断とエンジニアリングの視点から読み解くキュレーション・メディアです。"
+  lang="ja"
+  ogUrl="https://legacydram.com/ja/about/"
+  ogDescription="ウィスキーを人物とエンジニアリングの視点から読み解くキュレーション・メディア。"
+>
+  <Nav lang="ja" current="about" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.85rem; font-weight: 700; margin-bottom: 1.5rem;">このサイトについて</h1>
+
+    <div style="line-height: 1.85; color: var(--text-secondary);">
+      <p style="margin-bottom: 1.25rem;">
+        LegacyDramは、ウィスキーを「銘柄リスト」ではなく「誰のどんな決断で生まれたか」から読み解くキュレーション・メディアです。エンジニアが他人のレガシーコードを読むように、瓶の中に閉じ込められた意思決定とトレードオフをたどります。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">編集方針</h2>
+      <ul style="padding-left: 1.5rem; margin-bottom: 1.25rem;">
+        <li style="margin-bottom: 0.5rem;"><strong>人物が先。</strong>すべての銘柄の裏には、その味を決めた誰かがいます。そこから書きます。</li>
+        <li style="margin-bottom: 0.5rem;"><strong>技術を曖昧にしない。</strong>化学、工程、トレードオフは、雰囲気で済ませず説明します。</li>
+        <li style="margin-bottom: 0.5rem;"><strong>広告コピーは書かない。</strong>蒸留所のPR記事や「ベスト◯選」を理由なく並べる記事は載せません。</li>
+      </ul>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">「LegacyDram」の意味</h2>
+      <p style="margin-bottom: 1.25rem;">
+        エンジニアにとって「legacy（レガシー）」は、書いた人がもういなくても今日の意思決定を縛り続けるコードのこと。ウィスキー好きにとって「dram」は、グラスを空ける前にじっくり味わう小さな一杯のこと。LegacyDramは、その2つの意味が重なる場所にあります。すべての瓶は誰かのレガシーコードであり、すべての一杯はそれを読む機会です。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">運営者</h2>
+      <p style="margin-bottom: 1.25rem;">
+        井本 賢（Ken Imoto）— ソフトウェアエンジニア、ウィスキー愛好家、Kindle/Zenn でLLMエンジニアリングとウィスキーのコスパ分析の本を出しています。プロフィールと書籍カタログは <a href="https://kenimoto.dev" style="color: var(--link-color);">kenimoto.dev</a> から。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">運営会社</h2>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted); width: 35%;">会社名</td>
+          <td style="padding: 0.6rem 0;">合同会社 Propel-Lab</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">代表</td>
+          <td style="padding: 0.6rem 0;">井本 賢</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">ウェブサイト</td>
+          <td style="padding: 0.6rem 0;"><a href="https://www.propel-lab.co.jp/" style="color: var(--link-color);">propel-lab.co.jp</a></td>
+        </tr>
+        <tr>
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">連絡先</td>
+          <td style="padding: 0.6rem 0;"><a href="mailto:info@propel-lab.co.jp" style="color: var(--link-color);">info@propel-lab.co.jp</a></td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</BaseLayout>

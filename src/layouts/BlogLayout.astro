@@ -1,0 +1,256 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+
+import type { Alternate } from '../lib/alternates';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: string;
+  date: Date;
+  category?: 'people' | 'craft' | 'tasting';
+  tags: string[];
+  canonicalUrl: string;
+  ogImage?: string;
+  crossPostedTo?: { platform: string; url: string }[];
+  alternates?: Alternate[];
+}
+
+const { title, description, lang, date, category, tags, canonicalUrl, ogImage, crossPostedTo, alternates = [] } = Astro.props;
+const formattedDate = date.toISOString().split('T')[0];
+const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
+
+const categoryLabel = (cat?: string) => {
+  if (!cat) return '';
+  const labels: Record<string, { en: string; ja: string }> = {
+    people: { en: 'People', ja: '人物' },
+    craft: { en: 'Craft', ja: '技術' },
+    tasting: { en: 'Tasting', ja: 'テイスティング' },
+  };
+  return labels[cat]?.[lang === 'ja' ? 'ja' : 'en'] || cat;
+};
+---
+
+<BaseLayout
+  title={`${title} — LegacyDram`}
+  description={description}
+  lang={lang}
+  ogUrl={canonicalUrl}
+  ogDescription={description}
+  ogImage={ogImage}
+>
+  <Fragment slot="head">
+    {alternates.map(alt => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content={date.toISOString()} />
+    {tags.map(tag => <meta property="article:tag" content={tag} />)}
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": title,
+      "description": description,
+      "datePublished": date.toISOString(),
+      "author": {
+        "@type": "Person",
+        "name": "Ken Imoto",
+        "url": "https://kenimoto.dev"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LegacyDram",
+        "url": "https://legacydram.com"
+      },
+      "url": canonicalUrl,
+      "mainEntityOfPage": canonicalUrl,
+      "keywords": tags.join(', '),
+    })} />
+    <style>
+      .category-badge {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.45rem;
+        border-radius: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .category-people {
+        background: rgba(185, 132, 50, 0.18);
+        color: var(--accent-primary);
+      }
+      .category-craft {
+        background: rgba(74, 107, 79, 0.18);
+        color: #6B8E5E;
+      }
+      .category-tasting {
+        background: rgba(139, 74, 43, 0.18);
+        color: #C57A50;
+      }
+      .prose {
+        font-size: 1rem;
+        line-height: 1.85;
+        color: var(--text-secondary);
+      }
+      .prose h2 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin: 2.5rem 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--text-separator);
+      }
+      .prose h3 {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin: 2rem 0 0.75rem;
+      }
+      .prose p {
+        margin: 0 0 1.25rem;
+      }
+      .prose a {
+        color: var(--link-color);
+        text-decoration: underline;
+      }
+      .prose code {
+        background: var(--bg-card);
+        padding: 0.15rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+      .prose pre,
+      .prose :global(pre) {
+        background: #14110E !important;
+        color: #E8DEC8;
+        border-radius: 8px;
+        padding: 1.25rem !important;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+      }
+      .prose pre code,
+      .prose :global(pre) code {
+        background: none !important;
+        color: inherit;
+        padding: 0;
+      }
+      .prose blockquote {
+        border-left: 3px solid var(--accent-primary);
+        padding-left: 1rem;
+        color: var(--text-label);
+        margin: 1.5rem 0;
+        font-style: italic;
+      }
+      .prose ul, .prose ol {
+        padding-left: 1.5rem;
+        margin: 1rem 0;
+      }
+      .prose li {
+        margin: 0.4rem 0;
+      }
+      .prose img,
+      .prose :global(img) {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .prose hr {
+        border: none;
+        border-top: 1px solid var(--text-separator);
+        margin: 2rem 0;
+      }
+      .prose table,
+      .prose :global(table) {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.75rem 0;
+        font-size: 0.95rem;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      @media (min-width: 768px) {
+        .prose table,
+        .prose :global(table) {
+          display: table;
+          white-space: normal;
+        }
+      }
+      .prose thead,
+      .prose :global(thead) {
+        background: var(--bg-card);
+        border-bottom: 2px solid var(--text-separator);
+      }
+      .prose th, .prose td,
+      .prose :global(th), .prose :global(td) {
+        border: 1px solid var(--text-separator);
+        padding: 0.65rem 1rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      .prose th,
+      .prose :global(th) {
+        background: var(--bg-card);
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+      .prose tbody tr:nth-child(even),
+      .prose :global(tbody tr:nth-child(even)) {
+        background: rgba(185, 132, 50, 0.06);
+      }
+      .prose strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+    </style>
+  </Fragment>
+
+  <Nav lang={lang} current="blog" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <article>
+      <header style="margin-bottom: 2.5rem;">
+        <a href={blogIndexUrl} style="font-size: 0.85rem; color: var(--text-muted); text-decoration: none;">
+          &larr; {lang === 'ja' ? '記事一覧に戻る' : 'Back to articles'}
+        </a>
+        <h1 style="font-size: 2rem; font-weight: 700; margin: 1rem 0 0.75rem; line-height: 1.3;">{title}</h1>
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted);">
+          {category && (
+            <span class={`category-badge category-${category}`}>{categoryLabel(category)}</span>
+          )}
+          <time datetime={date.toISOString()}>{formattedDate}</time>
+          {tags.length > 0 && (
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              {tags.map(tag => (
+                <span style="background: var(--bg-card); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.8rem;">{tag}</span>
+              ))}
+            </div>
+          )}
+        </div>
+      </header>
+
+      <div class="prose">
+        <slot />
+      </div>
+
+      {crossPostedTo && crossPostedTo.length > 0 && (
+        <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--text-separator); font-size: 0.85rem; color: var(--text-muted);">
+          <p>
+            {lang === 'ja' ? 'この記事は' : 'Also published on '}
+            {crossPostedTo.map((cp, i) => (
+              <>
+                <a href={cp.url} style="color: var(--link-color);">{cp.platform}</a>
+                {i < crossPostedTo.length - 1 ? ', ' : ''}
+              </>
+            ))}
+            {lang === 'ja' ? ' にもクロスポストしています。' : '.'}
+          </p>
+        </footer>
+      )}
+    </article>
+  </main>
+</BaseLayout>

@@ -1,0 +1,142 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  lang: string;
+  ogUrl: string;
+  ogDescription: string;
+  ogImage?: string;
+}
+
+const { title, description, lang, ogUrl, ogDescription, ogImage } = Astro.props;
+const resolvedOgImage = ogImage || "https://legacydram.com/og-image.png";
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="canonical" href={ogUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={resolvedOgImage} />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LegacyDram" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={resolvedOgImage} />
+    <script is:inline>
+      (function() {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <slot name="head" />
+    <style>
+      @import "tailwindcss";
+
+      :root,
+      [data-theme="dark"] {
+        --bg-primary: #14110E;
+        --bg-card: #1F1A14;
+        --text-primary: #E8DEC8;
+        --text-secondary: #C2B392;
+        --text-label: #9B8868;
+        --text-muted: #6B5C46;
+        --text-separator: #332B22;
+        --link-color: #D4A86A;
+        --accent-primary: #B98432;
+        --accent-warm: #8B4A2B;
+        --accent-green: #4A6B4F;
+      }
+
+      [data-theme="light"] {
+        --bg-primary: #F5EFE3;
+        --bg-card: #FFFFFF;
+        --text-primary: #1F1611;
+        --text-secondary: #3E2E1F;
+        --text-label: #6B5742;
+        --text-muted: #998874;
+        --text-separator: #DCD0BE;
+        --link-color: #8B5A24;
+        --accent-primary: #A66F1F;
+        --accent-warm: #8B4A2B;
+        --accent-green: #4A6B4F;
+      }
+
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        margin: 0;
+        min-height: 100vh;
+        transition: background-color 0.2s, color 0.2s;
+      }
+
+      h1, h2, h3 {
+        font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .theme-toggle {
+        background: none;
+        border: 1px solid var(--text-separator);
+        color: var(--text-label);
+        cursor: pointer;
+        padding: 0.35rem 0.5rem;
+        border-radius: 6px;
+        font-size: 1rem;
+        line-height: 1;
+        transition: color 0.2s, border-color 0.2s;
+      }
+      .theme-toggle:hover {
+        color: var(--text-primary);
+        border-color: var(--text-label);
+      }
+
+      [data-theme="dark"] .icon-sun { display: inline; }
+      [data-theme="dark"] .icon-moon { display: none; }
+      [data-theme="light"] .icon-sun { display: none; }
+      [data-theme="light"] .icon-moon { display: inline; }
+
+      @media (max-width: 640px) {
+        main {
+          padding: 1.5rem 1rem !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('theme-toggle');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            var current = document.documentElement.getAttribute('data-theme') || 'dark';
+            var next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

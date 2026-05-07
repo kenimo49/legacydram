@@ -1,0 +1,44 @@
+# LegacyDram
+
+> Whisky, told through the people who made it — and read by the engineers who drink it.
+
+LegacyDram is a curated whisky media for engineers and the people who love a story behind a glass. Instead of yet another tasting-note dump, the site studies whisky the way a craftsperson reads their own legacy code: who made the decisions, what trade-offs they shipped, why the choice still tastes the way it does decades later.
+
+## What LegacyDram Covers
+
+- **People**: distillers, blenders, owners, and engineers behind the bottles. Biographies, decisions, the trade-offs they shipped.
+- **Craft**: distillation chemistry, cask science, blending math, fermentation engineering — whisky-making seen through an engineer's lens.
+- **Tasting**: curated bottle picks paired with the human story and the technical detail. No marketing copy.
+
+## Audience
+
+- Software engineers, scientists, and technical hobbyists who already drink whisky.
+- Whisky drinkers who want depth — historical context, technical accuracy, person-level reasoning — instead of marketing prose.
+
+## Editorial Stance
+
+- People-first: every bottle has a person whose decisions shaped it.
+- Engineering literacy: chemistry, process, and trade-offs explained, never hand-waved.
+- No advertorials, no celebrity-distillery PR, no "best whisky" listicles without reasoning.
+
+## Author
+
+- Ken Imoto — software engineer, whisky enthusiast, author of the Kindle/Zenn book series on LLM engineering and whisky cost-performance analysis.
+- Site: https://kenimoto.dev — primary author profile and book catalog.
+
+## Languages
+
+- English (primary)
+- Japanese (日本語)
+
+## Content URLs
+
+- Blog (EN): https://legacydram.com/blog/
+- Blog (JA): https://legacydram.com/ja/blog/
+- RSS (EN): https://legacydram.com/blog.xml
+- RSS (JA): https://legacydram.com/ja/blog.xml
+
+## Contact
+
+- Website: https://legacydram.com
+- Author site: https://kenimoto.dev

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#14110E"/>
+  <!-- glass body -->
+  <path d="M20 18 H44 L41 50 H23 Z" fill="none" stroke="#D4A86A" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- liquid -->
+  <path d="M22 32 H42 L40 48 H24 Z" fill="#B98432" opacity="0.85"/>
+  <!-- highlight -->
+  <line x1="24" y1="22" x2="24" y2="30" stroke="#E8DEC8" stroke-width="1.3" stroke-linecap="round" opacity="0.7"/>
+</svg>
