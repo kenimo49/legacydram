@@ -6,8 +6,7 @@ lang: en
 category: people
 tags: ["intro", "whisky", "engineering", "curation"]
 featured: true
-canonical_url: "https://legacydram.com/blog/welcome-to-legacydram"
-cross_posted_to: []
+canonical_url: "https://legacydram.com/blog/welcome-to-legacydram/"
 ---
 
 This site is small on purpose.
@@ -31,3 +30,11 @@ A note on what this site won't do: it won't run sponsored distillery posts. It w
 The first proper articles are coming. Until then, thank you for finding the site early. The kind of reader who reads the welcome post is exactly the kind of reader this site is for.
 
 — Ken
+
+---
+
+## Where to start
+
+- **People** — [Frank McHardy and the Silent Years: How Springbank's Restart Survived Itself](/blog/frank-mchardy-springbank-silent-years/)
+- **Craft** — [The Reflux Equation: Why Glenmorangie's Stills Are 5.14 Metres Tall (and What Bill Lumsden Inherited)](/blog/glenmorangie-still-height-reflux-bill-lumsden/)
+- **Tasting** — coming soon (paired with people + craft references)

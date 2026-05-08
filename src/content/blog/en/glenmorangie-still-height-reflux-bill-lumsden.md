@@ -6,8 +6,7 @@ lang: en
 category: craft
 tags: ["Bill Lumsden", "Glenmorangie", "distillation", "reflux ratio", "still design", "wood finishing", "Highland", "LVMH"]
 featured: false
-canonical_url: "https://legacydram.com/blog/glenmorangie-still-height-reflux-bill-lumsden"
-cross_posted_to: []
+canonical_url: "https://legacydram.com/blog/glenmorangie-still-height-reflux-bill-lumsden/"
 ---
 
 A friend pointed at her glass on a Tuesday and asked why Glenmorangie tastes the way it does. I made the mistake, before I had finished my own dram, of starting with the number. Five point one four metres. That is the height of the wash still at Glenmorangie's distillery in Tain, on the eastern edge of the Highlands. It is the tallest pot still in any Scottish distillery, and the shape was already decided before any human alive today was born.
@@ -101,3 +100,18 @@ The Astar casks Lumsden specified at the Ozark stave level will keep maturing lo
 This is the part of whisky that maps cleanly onto long-lived engineering systems. Most of what you ship was decided by people who do not know your name. Matheson chose the still shape with money he did not have. The eight original stills came down through six owners. Lumsden walked into a system whose most consequential parameter was settled before he was born and built a thirty-year career around managing the layer above it. The next person walks into the same constraint, plus thirty more years of inherited cask program decisions.
 
 When you next pour a Glenmorangie 10, you are tasting an 1843 budget compromise filtered through a 1995 PhD's wrapper layer, served at a strength a 2004 marketing committee approved. The fact that it tastes like a clean, easy dram of Highland whisky is its own quiet engineering achievement. The fact that the people responsible mostly do not get the credit is, as far as I can tell, the standard outcome for any system that lasts long enough to be worth drinking.
+
+---
+
+## Related reading
+
+- [Frank McHardy and the Silent Years: How Springbank's Restart Survived Itself](/blog/frank-mchardy-springbank-silent-years/) — another inherited-stillhouse story, very different ownership context
+- [Welcome to LegacyDram](/blog/welcome-to-legacydram/) — why we read whisky like legacy code
+
+## Sources
+
+- Glenmorangie official — [glenmorangie.com](https://www.glenmorangie.com/)
+- Bill Lumsden, Master Distiller (Glenmorangie experience pages) — [glenmorangie.com](https://www.glenmorangie.com/en-int/glenmorangie-experience/)
+- LVMH (parent group) — [lvmh.com](https://www.lvmh.com/)
+- *Whisky Magazine* — [whiskymag.com](https://whiskymag.com/)
+- Wikipedia: [Glenmorangie](https://en.wikipedia.org/wiki/Glenmorangie) and [Bill Lumsden](https://en.wikipedia.org/wiki/Bill_Lumsden)

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
+import { staticAlternates } from '../lib/alternates';
 ---
 
 <BaseLayout
@@ -9,6 +10,7 @@ import Nav from '../components/Nav.astro';
   lang="en"
   ogUrl="https://legacydram.com/about/"
   ogDescription="LegacyDram is a curated whisky media for engineers and the people who love a story behind a glass."
+  alternates={staticAlternates('/about/')}
 >
   <Nav lang="en" current="about" />
 

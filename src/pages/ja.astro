@@ -2,11 +2,28 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import { getCollection } from 'astro:content';
+import { staticAlternates } from '../lib/alternates';
 
 const posts = (await getCollection('blog'))
   .filter(p => p.data.lang === 'ja')
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 5);
+
+const siteUrl = 'https://legacydram.com';
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'LegacyDram',
+  alternateName: 'ウィスキーを、人で読む。',
+  url: `${siteUrl}/ja/`,
+  description: 'ウィスキーを「誰がどんな決断で作ったか」から読み解くキュレーション・メディア。',
+  inLanguage: 'ja-JP',
+  publisher: {
+    '@type': 'Organization',
+    name: 'LegacyDram',
+    url: `${siteUrl}/`,
+  },
+};
 ---
 
 <BaseLayout
@@ -15,6 +32,8 @@ const posts = (await getCollection('blog'))
   lang="ja"
   ogUrl="https://legacydram.com/ja/"
   ogDescription="ウィスキーを「誰がどんな決断で作ったか」から読み解くキュレーション・メディア。"
+  alternates={staticAlternates('/')}
+  jsonLd={websiteJsonLd}
 >
   <Nav lang="ja" current="home" />
 

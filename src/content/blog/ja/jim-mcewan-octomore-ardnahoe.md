@@ -6,8 +6,7 @@ lang: ja
 category: craft
 tags: ["Jim McEwan", "Bruichladdich", "Octomore", "Ardnahoe", "Bowmore", "ピート", "Islay", "フェノール", "ppm"]
 featured: false
-canonical_url: "https://legacydram.com/ja/blog/jim-mcewan-octomore-ardnahoe"
-cross_posted_to: []
+canonical_url: "https://legacydram.com/ja/blog/jim-mcewan-octomore-ardnahoe/"
 ---
 
 ピートの ppm という単位を初めて聞いたとき、私はそれを血中アルコール濃度の親戚かと思いました。この語感が職場の安全衛生資料を連想させるので、ウィスキー業界が選んだマーケティング言語としては、今でも少し奇妙だと思っています。Octomore というシリーズは、その奇妙な単位を最前面に置くことで世界で最も語られるピーテッドの一つになった、という事実から始めたい話です。
@@ -90,4 +89,18 @@ Octomore は、彼の手を離れた今もリリースが続いています。15
 
 ---
 
-**主な参考資料**: DRAM Scotland(2023年1月、McEwan の MBE 受勲報)、Whisky Magazine の Mark Reynier インタビュー、Dramface "Spotlight: Octomore & Phenols"(2022年、フェノール量の蒸留過程での損失分析)、Scotch Whisky Magazine の Octomore 8.3 リリース記事(309.1ppm の世界記録報)、Bruichladdich 公式 FAQ。
+## 関連記事
+
+- [Glenfiddich 12 と Brian Kinsman ― 世界で一番売れているシングルモルトを「12年、同じ味」で出し続ける仕事](/ja/blog/glenfiddich-12-brian-kinsman-consistency/) — 同じ「決断の継承」というテーマを、別の蒸留所と別の判断軸で読み解く
+- [LegacyDramへようこそ](/ja/blog/welcome-to-legacydram/) — このサイトの編集方針
+
+## 主な参考資料
+
+- [Bruichladdich 公式](https://www.bruichladdich.com/) — Octomore シリーズおよび FAQ
+- [Ardnahoe 公式](https://www.ardnahoedistillery.com/) — Hunter Laing の Islay 第9蒸留所
+- [Bowmore 公式](https://www.bowmore.com/) — McEwan のキャリアの起点
+- *DRAM Scotland*（2023年1月、McEwan の MBE 受勲報）— [dramscotland.co.uk](https://www.dramscotland.co.uk/)
+- *Whisky Magazine* の Mark Reynier インタビュー — [whiskymag.com](https://whiskymag.com/)
+- Dramface "Spotlight: Octomore & Phenols"（2022年、フェノール量の蒸留過程での損失分析）— [dramface.com](https://www.dramface.com/)
+- *Scotch Whisky Magazine* の Octomore 8.3 リリース記事（309.1ppm の世界記録報）— [scotchwhisky.com](https://scotchwhisky.com/)
+- Wikipedia: [Bruichladdich distillery](https://en.wikipedia.org/wiki/Bruichladdich_distillery) と [Octomore](https://en.wikipedia.org/wiki/Octomore_distillery)

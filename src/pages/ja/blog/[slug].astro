@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 
 const { post, alternates } = Astro.props;
 const { Content } = await render(post);
-const canonicalUrl = `https://legacydram.com/ja/blog/${post.id.replace('ja/', '')}/`;
+const canonicalUrl = post.data.canonical_url ?? `https://legacydram.com/ja/blog/${post.id.replace('ja/', '')}/`;
 ---
 
 <BlogLayout
@@ -29,7 +29,6 @@ const canonicalUrl = `https://legacydram.com/ja/blog/${post.id.replace('ja/', ''
   tags={post.data.tags}
   canonicalUrl={canonicalUrl}
   ogImage={post.data.og_image}
-  crossPostedTo={post.data.cross_posted_to}
   alternates={alternates}
 >
   <Content />

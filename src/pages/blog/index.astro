@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Nav from '../../components/Nav.astro';
 import { getCollection } from 'astro:content';
+import { staticAlternates } from '../../lib/alternates';
 
 const posts = (await getCollection('blog'))
   .filter(p => p.data.lang === 'en')
@@ -21,6 +22,7 @@ const categories = [
   lang="en"
   ogUrl="https://legacydram.com/blog/"
   ogDescription="People, craft, and tasting articles on whisky from an engineer's perspective."
+  alternates={staticAlternates('/blog/')}
 >
   <Nav lang="en" current="blog" />
 

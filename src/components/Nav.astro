@@ -1,10 +1,13 @@
 ---
+import type { Alternate } from '../lib/alternates';
+
 interface Props {
   lang: string;
   current?: 'home' | 'blog' | 'about' | '';
+  alternates?: Alternate[];
 }
 
-const { lang, current = 'home' } = Astro.props;
+const { lang, current = 'home', alternates = [] } = Astro.props;
 
 const langConfig: Record<string, { home: string; blog: string; about: string; label: string }> = {
   en: { home: '/', blog: '/blog/', about: '/about/', label: 'EN' },
@@ -19,13 +22,29 @@ const aboutUrl = currentLang.about;
 const pathname = Astro.url.pathname;
 const isBlogPost = /^(\/[a-z]{2})?\/blog\/.+/.test(pathname);
 
+// alternates が渡されていれば該当言語の URL を使う（個別記事 → 対応言語版へ正しく遷移）
+const alternateMap = new Map<string, string>();
+for (const alt of alternates) {
+  if (alt.hreflang === 'x-default') continue;
+  alternateMap.set(alt.hreflang, alt.href);
+}
+
 const languages = Object.entries(langConfig)
   .filter(([code]) => code !== lang)
-  .map(([code, config]) => ({
-    code,
-    label: config.label,
-    url: isBlogPost ? config.blog : (current === 'about' ? config.about : config.home),
-  }));
+  .map(([code, config]) => {
+    let url: string;
+    const altHref = alternateMap.get(code);
+    if (altHref) {
+      url = altHref;
+    } else if (isBlogPost) {
+      url = config.blog;
+    } else if (current === 'about') {
+      url = config.about;
+    } else {
+      url = config.home;
+    }
+    return { code, label: config.label, url };
+  });
 
 const blogLabel = lang === 'ja' ? 'ブログ' : 'Articles';
 const aboutLabel = lang === 'ja' ? 'このサイトについて' : 'About';
@@ -46,9 +65,15 @@ const aboutLabel = lang === 'ja' ? 'このサイトについて' : 'About';
         ))}
       </div>
     </div>
-    <button id="theme-toggle" class="theme-toggle" aria-label={lang === 'ja' ? 'テーマ切替' : 'Toggle theme'}>
-      <span class="icon-sun">&#9788;</span>
-      <span class="icon-moon">&#9790;</span>
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      type="button"
+      aria-pressed="false"
+      aria-label={lang === 'ja' ? 'テーマ切替' : 'Toggle theme'}
+    >
+      <span class="icon-sun" aria-hidden="true">&#9788;</span>
+      <span class="icon-moon" aria-hidden="true">&#9790;</span>
     </button>
   </div>
 </nav>

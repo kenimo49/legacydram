@@ -2,11 +2,45 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import { getCollection } from 'astro:content';
+import { staticAlternates } from '../lib/alternates';
 
 const posts = (await getCollection('blog'))
   .filter(p => p.data.lang === 'en')
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 5);
+
+const siteUrl = 'https://legacydram.com';
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'LegacyDram',
+  alternateName: 'Whisky, told through the people who made it',
+  url: `${siteUrl}/`,
+  description: 'A curated whisky media for engineers and the people who love a story behind a glass.',
+  inLanguage: 'en-US',
+  publisher: {
+    '@type': 'Organization',
+    name: 'LegacyDram',
+    url: `${siteUrl}/`,
+  },
+};
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'LegacyDram',
+  url: `${siteUrl}/`,
+  logo: `${siteUrl}/favicon.svg`,
+  founder: {
+    '@type': 'Person',
+    name: 'Ken Imoto',
+    url: 'https://kenimoto.dev/',
+  },
+  parentOrganization: {
+    '@type': 'Organization',
+    name: 'Propel-Lab LLC',
+    url: 'https://propel-lab.co.jp/',
+  },
+};
 ---
 
 <BaseLayout
@@ -15,6 +49,8 @@ const posts = (await getCollection('blog'))
   lang="en"
   ogUrl="https://legacydram.com/"
   ogDescription="A curated whisky media for engineers and the people who love a story behind a glass."
+  alternates={staticAlternates('/')}
+  jsonLd={[websiteJsonLd, orgJsonLd]}
 >
   <Nav lang="en" current="home" />
 

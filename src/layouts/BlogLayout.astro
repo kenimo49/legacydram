@@ -9,17 +9,18 @@ interface Props {
   description: string;
   lang: string;
   date: Date;
+  updated?: Date;
   category?: 'people' | 'craft' | 'tasting';
   tags: string[];
   canonicalUrl: string;
   ogImage?: string;
-  crossPostedTo?: { platform: string; url: string }[];
   alternates?: Alternate[];
 }
 
-const { title, description, lang, date, category, tags, canonicalUrl, ogImage, crossPostedTo, alternates = [] } = Astro.props;
+const { title, description, lang, date, updated, category, tags, canonicalUrl, ogImage, alternates = [] } = Astro.props;
 const formattedDate = date.toISOString().split('T')[0];
 const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
+const siteUrl = 'https://legacydram.com';
 
 const categoryLabel = (cat?: string) => {
   if (!cat) return '';
@@ -30,6 +31,54 @@ const categoryLabel = (cat?: string) => {
   };
   return labels[cat]?.[lang === 'ja' ? 'ja' : 'en'] || cat;
 };
+
+const blogPostingJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  image: ogImage
+    ? (ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).href)
+    : `${siteUrl}/og-default.png`,
+  datePublished: date.toISOString(),
+  dateModified: (updated ?? date).toISOString(),
+  author: {
+    '@type': 'Person',
+    name: 'Ken Imoto',
+    url: 'https://kenimoto.dev/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'LegacyDram',
+    url: `${siteUrl}/`,
+  },
+  url: canonicalUrl,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+  ...(tags && tags.length > 0 ? { keywords: tags.join(', ') } : {}),
+  ...(category ? { articleSection: categoryLabel(category) } : {}),
+  inLanguage: lang === 'ja' ? 'ja-JP' : 'en-US',
+};
+
+const homeUrl = lang === 'ja' ? `${siteUrl}/ja/` : `${siteUrl}/`;
+const blogUrl = lang === 'ja' ? `${siteUrl}/ja/blog/` : `${siteUrl}/blog/`;
+const breadcrumbItems = [
+  { name: lang === 'ja' ? 'ホーム' : 'Home', url: homeUrl },
+  { name: lang === 'ja' ? '記事' : 'Articles', url: blogUrl },
+  ...(category ? [{ name: categoryLabel(category), url: blogUrl }] : []),
+  { name: title, url: canonicalUrl },
+];
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    item: b.url,
+  })),
+};
+
+const articleJsonLd = [blogPostingJsonLd, breadcrumbJsonLd];
 ---
 
 <BaseLayout
@@ -39,34 +88,18 @@ const categoryLabel = (cat?: string) => {
   ogUrl={canonicalUrl}
   ogDescription={description}
   ogImage={ogImage}
+  ogType="article"
+  alternates={alternates}
+  jsonLd={articleJsonLd}
+  articleMeta={{
+    publishedTime: date.toISOString(),
+    modifiedTime: (updated ?? date).toISOString(),
+    author: 'Ken Imoto',
+    section: categoryLabel(category),
+    tags,
+  }}
 >
   <Fragment slot="head">
-    {alternates.map(alt => (
-      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
-    ))}
-    <meta property="og:type" content="article" />
-    <meta property="article:published_time" content={date.toISOString()} />
-    {tags.map(tag => <meta property="article:tag" content={tag} />)}
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": title,
-      "description": description,
-      "datePublished": date.toISOString(),
-      "author": {
-        "@type": "Person",
-        "name": "Ken Imoto",
-        "url": "https://kenimoto.dev"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "LegacyDram",
-        "url": "https://legacydram.com"
-      },
-      "url": canonicalUrl,
-      "mainEntityOfPage": canonicalUrl,
-      "keywords": tags.join(', '),
-    })} />
     <style>
       .category-badge {
         font-size: 0.7rem;
@@ -209,7 +242,7 @@ const categoryLabel = (cat?: string) => {
     </style>
   </Fragment>
 
-  <Nav lang={lang} current="blog" />
+  <Nav lang={lang} current="blog" alternates={alternates} />
 
   <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
     <article>
@@ -236,21 +269,6 @@ const categoryLabel = (cat?: string) => {
       <div class="prose">
         <slot />
       </div>
-
-      {crossPostedTo && crossPostedTo.length > 0 && (
-        <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--text-separator); font-size: 0.85rem; color: var(--text-muted);">
-          <p>
-            {lang === 'ja' ? 'この記事は' : 'Also published on '}
-            {crossPostedTo.map((cp, i) => (
-              <>
-                <a href={cp.url} style="color: var(--link-color);">{cp.platform}</a>
-                {i < crossPostedTo.length - 1 ? ', ' : ''}
-              </>
-            ))}
-            {lang === 'ja' ? ' にもクロスポストしています。' : '.'}
-          </p>
-        </footer>
-      )}
     </article>
   </main>
 </BaseLayout>

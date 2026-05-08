@@ -6,8 +6,7 @@ lang: ja
 category: tasting
 tags: ["Glenfiddich", "Glenfiddich 12", "Brian Kinsman", "David Stewart", "Speyside", "William Grant & Sons", "consistency"]
 featured: false
-canonical_url: "https://legacydram.com/ja/blog/glenfiddich-12-brian-kinsman-consistency"
-cross_posted_to: []
+canonical_url: "https://legacydram.com/ja/blog/glenfiddich-12-brian-kinsman-consistency/"
 ---
 
 私の自宅の棚で、Glenfiddich 12 の瓶が3ヶ月ぐらい同じ高さで止まっていました。次の瓶を買う気力がないのではなく、開けた瓶への礼儀の問題で、ときどき思い出して指三本分注ぐ、という関係を続けていた瓶です。
@@ -87,4 +86,16 @@ Kinsman は新製品をまったく作っていないわけではありません
 
 ---
 
-**主な参考資料**: William Grant & Sons 公式 Brian Kinsman プロフィール、PMA Canada "Meet the Maker: Brian Kinsman"(St Andrews 大学化学卒・1994年・1997年入社・2009年12月就任の記述)、Wikipedia "David Stewart (master blender)"(1962年入社・1974年 Malt Master 就任・2009年 Glenfiddich 譲渡)、Sandy Grant Gordon の Wikipedia エントリ、The Spirits Business "Scotch Whisky Brand Champion 2019: Glenfiddich"(年間120万9リットル箱の販売数)、Glenfiddich 公式 Experimental Series リリース情報(IPA 2016 / Project XX 2016 / Winter Storm 2017 / Fire & Cane 2018)。
+## 関連記事
+
+- [樽から数字へ — Jim McEwan が Octomore で選び、Ardnahoe で選ばなかったもの](/ja/blog/jim-mcewan-octomore-ardnahoe/) — Master Distiller の決断が瓶に残す影、別の角度から
+- [LegacyDramへようこそ](/ja/blog/welcome-to-legacydram/) — このサイトの編集方針
+
+## 主な参考資料
+
+- [William Grant & Sons 公式](https://www.williamgrant.com/) — Brian Kinsman プロフィール
+- [Glenfiddich 公式](https://www.glenfiddich.com/) — Experimental Series リリース情報（IPA 2016 / Project XX 2016 / Winter Storm 2017 / Fire & Cane 2018）
+- PMA Canada "Meet the Maker: Brian Kinsman"（St Andrews 大学化学卒・1994年・1997年入社・2009年12月就任）
+- Wikipedia: [David Stewart (master blender)](https://en.wikipedia.org/wiki/David_Stewart_(master_blender))（1962年入社・1974年 Malt Master 就任・2009年 Glenfiddich 譲渡）
+- Wikipedia: [Sandy Grant Gordon](https://en.wikipedia.org/wiki/Sandy_Grant_Gordon)
+- *The Spirits Business* "Scotch Whisky Brand Champion 2019: Glenfiddich"（年間120万9リットル箱の販売数）— [thespiritsbusiness.com](https://www.thespiritsbusiness.com/)

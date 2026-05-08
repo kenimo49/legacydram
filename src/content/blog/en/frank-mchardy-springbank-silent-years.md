@@ -6,8 +6,7 @@ lang: en
 category: people
 tags: ["Frank McHardy", "Springbank", "Campbeltown", "silent years", "Glengyle", "Kilkerran", "1980s", "floor malting"]
 featured: false
-canonical_url: "https://legacydram.com/blog/frank-mchardy-springbank-silent-years"
-cross_posted_to: []
+canonical_url: "https://legacydram.com/blog/frank-mchardy-springbank-silent-years/"
 ---
 
 There is a phrase the whisky industry uses, *silent years*, that nobody likes to bring up in a shareholder meeting. It sounds romantic, the way *legacy system* sounds dignified when you are not the engineer maintaining it. In practice, a silent year is a distillery that has stopped making spirit (sometimes for a quarter, sometimes for a decade) while the warehouses keep aging the casks that were laid down before the lights went out. Whisky maturation does not pause. The math keeps running even when the boilers do not.
@@ -78,4 +77,15 @@ That is the thing about whisky as a profession, and it is the thing about most l
 
 ---
 
-Sources used in this piece: *Whisky Magazine*, "Frank's wild years"; Springbank distillery's published history (springbank.scot); Wikipedia's entries on Springbank and Glengyle distilleries; the Whisky Magazine Hall of Fame announcement, 2014.
+## Related reading
+
+- [The Reflux Equation: Why Glenmorangie's Stills Are 5.14 Metres Tall (and What Bill Lumsden Inherited)](/blog/glenmorangie-still-height-reflux-bill-lumsden/) — same era of inherited still geometry, different family of decisions
+- [Welcome to LegacyDram](/blog/welcome-to-legacydram/) — why we read whisky like legacy code
+
+## Sources
+
+- *Whisky Magazine*, "Frank's wild years" — [whiskymag.com](https://whiskymag.com/)
+- Springbank distillery's published history — [springbank.scot](https://www.springbank.scot/)
+- Glengyle / Kilkerran distillery — [kilkerran.scot](https://www.kilkerran.scot/)
+- *Whisky Magazine* Hall of Fame announcement (2014)
+- Wikipedia entries on [Springbank](https://en.wikipedia.org/wiki/Springbank_distillery) and [Glengyle](https://en.wikipedia.org/wiki/Glengyle_distillery)

@@ -1,4 +1,14 @@
 ---
+import type { Alternate } from '../lib/alternates';
+
+interface ArticleMeta {
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+}
+
 interface Props {
   title: string;
   description: string;
@@ -6,10 +16,33 @@ interface Props {
   ogUrl: string;
   ogDescription: string;
   ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  jsonLd?: object | object[];
+  alternates?: Alternate[];
+  articleMeta?: ArticleMeta;
 }
 
-const { title, description, lang, ogUrl, ogDescription, ogImage } = Astro.props;
-const resolvedOgImage = ogImage || "https://legacydram.com/og-image.png";
+const {
+  title,
+  description,
+  lang,
+  ogUrl,
+  ogDescription,
+  ogImage,
+  ogType = 'website',
+  noindex = false,
+  jsonLd,
+  alternates = [],
+  articleMeta,
+} = Astro.props;
+
+const siteUrl = 'https://legacydram.com';
+const resolvedOgImage = ogImage
+  ? (ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).href)
+  : `${siteUrl}/og-default.png`;
+const gaId = import.meta.env.PUBLIC_GA_ID ?? 'G-D1351D30XH';
+const jsonLdArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 ---
 
 <!doctype html>
@@ -18,27 +51,53 @@ const resolvedOgImage = ogImage || "https://legacydram.com/og-image.png";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
     <title>{title}</title>
     <link rel="canonical" href={ogUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- Google Analytics -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-D1351D30XH"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-D1351D30XH');
-    </script>
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {alternates.map((alt) => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
+    {gaId && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline define:vars={{ gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaId);
+        </script>
+      </>
+    )}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={ogDescription} />
     <meta property="og:image" content={resolvedOgImage} />
     <meta property="og:url" content={ogUrl} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="LegacyDram" />
+    {ogType === 'article' && articleMeta?.publishedTime && (
+      <meta property="article:published_time" content={articleMeta.publishedTime} />
+    )}
+    {ogType === 'article' && articleMeta?.modifiedTime && (
+      <meta property="article:modified_time" content={articleMeta.modifiedTime} />
+    )}
+    {ogType === 'article' && articleMeta?.author && (
+      <meta property="article:author" content={articleMeta.author} />
+    )}
+    {ogType === 'article' && articleMeta?.section && (
+      <meta property="article:section" content={articleMeta.section} />
+    )}
+    {ogType === 'article' && articleMeta?.tags && articleMeta.tags.map((tag) => (
+      <meta property="article:tag" content={tag} />
+    ))}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={ogDescription} />
     <meta name="twitter:image" content={resolvedOgImage} />
+    {jsonLdArray.map((entry) => (
+      <script type="application/ld+json" set:html={JSON.stringify(entry)} />
+    ))}
     <script is:inline>
       (function() {
         var t = localStorage.getItem('theme');
@@ -136,14 +195,23 @@ const resolvedOgImage = ogImage || "https://legacydram.com/og-image.png";
     <script is:inline>
       document.addEventListener('DOMContentLoaded', function() {
         var btn = document.getElementById('theme-toggle');
-        if (btn) {
-          btn.addEventListener('click', function() {
-            var current = document.documentElement.getAttribute('data-theme') || 'dark';
-            var next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-          });
+        if (!btn) return;
+        function applyState(theme) {
+          var isDark = theme === 'dark';
+          btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+          var label = isDark ? 'Switch to light theme' : 'Switch to dark theme';
+          var jaLabel = isDark ? 'ライトテーマに切替' : 'ダークテーマに切替';
+          var langAttr = document.documentElement.getAttribute('lang') || 'en';
+          btn.setAttribute('aria-label', langAttr === 'ja' ? jaLabel : label);
         }
+        applyState(document.documentElement.getAttribute('data-theme') || 'dark');
+        btn.addEventListener('click', function() {
+          var current = document.documentElement.getAttribute('data-theme') || 'dark';
+          var next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          applyState(next);
+        });
       });
     </script>
   </body>
