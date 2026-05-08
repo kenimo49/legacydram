@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="copperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B98432"/>
+      <stop offset="0.5" stop-color="#8B4A2B"/>
+      <stop offset="1" stop-color="#6B3820"/>
+    </linearGradient>
+    <linearGradient id="copperShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6B3820"/>
+      <stop offset="0.4" stop-color="#B98432"/>
+      <stop offset="0.6" stop-color="#D8A858"/>
+      <stop offset="1" stop-color="#8B4A2B"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="120" y="90" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">
+    Glenmorangie pot still: 5.14 metres
+  </text>
+  <text x="120" y="132" font-family="Inter, sans-serif" font-size="26" fill="#B98432">
+    The geometry William Matheson chose in 1843, still in service in 2026
+  </text>
+
+  <!-- Vertical scale on the far left -->
+  <line x1="170" y1="240" x2="170" y2="930" stroke="#4A6B4F" stroke-width="2" stroke-dasharray="6,6"/>
+  <line x1="160" y1="240" x2="180" y2="240" stroke="#4A6B4F" stroke-width="2"/>
+  <line x1="160" y1="585" x2="180" y2="585" stroke="#4A6B4F" stroke-width="2"/>
+  <line x1="160" y1="930" x2="180" y2="930" stroke="#4A6B4F" stroke-width="2"/>
+  <text x="155" y="248" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="end">5.14 m</text>
+  <text x="155" y="593" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">2.5 m</text>
+  <text x="155" y="938" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="end">0 m</text>
+
+  <!-- Still pot (bottom bulb) -->
+  <ellipse cx="700" cy="860" rx="220" ry="70" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+  <path d="M 480 860 Q 480 720 540 670 L 860 670 Q 920 720 920 860 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+
+  <!-- Heat source -->
+  <rect x="640" y="930" width="120" height="20" fill="#4A6B4F" rx="4"/>
+  <text x="700" y="985" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">heat source (steam coil)</text>
+
+  <!-- Neck (the tall part) -->
+  <path d="M 540 670 L 580 600 L 580 240 L 820 240 L 820 600 L 860 670 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+  <line x1="580" y1="600" x2="820" y2="600" stroke="#3D2516" stroke-width="2"/>
+  <line x1="580" y1="450" x2="820" y2="450" stroke="#3D2516" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+  <line x1="580" y1="320" x2="820" y2="320" stroke="#3D2516" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+
+  <!-- Lyne arm angled UPWARD -->
+  <path d="M 820 240 L 820 220 L 1180 130 L 1180 160 L 840 250 L 820 250 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+
+  <!-- Condenser -->
+  <rect x="1180" y="100" width="220" height="100" fill="#6B3820" rx="6" filter="url(#softShadow)"/>
+  <rect x="1185" y="105" width="210" height="90" fill="none" stroke="#B98432" stroke-width="2" rx="4"/>
+  <text x="1290" y="160" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" text-anchor="middle" font-weight="600">condenser</text>
+
+  <!-- Reflux arrows: heavy compounds falling back DOWN inside the neck -->
+  <g stroke="#B98432" stroke-width="3" fill="#B98432">
+    <!-- Down arrows -->
+    <line x1="640" y1="280" x2="640" y2="430" stroke-linecap="round"/>
+    <polygon points="640,440 632,425 648,425"/>
+    <line x1="700" y1="320" x2="700" y2="500" stroke-linecap="round"/>
+    <polygon points="700,510 692,495 708,495"/>
+    <line x1="760" y1="280" x2="760" y2="420" stroke-linecap="round"/>
+    <polygon points="760,430 752,415 768,415"/>
+  </g>
+
+  <!-- Up arrows: lighter compounds escaping -->
+  <g stroke="#D8A858" stroke-width="3" fill="#D8A858" opacity="0.85">
+    <line x1="610" y1="500" x2="610" y2="280" stroke-linecap="round"/>
+    <polygon points="610,270 602,285 618,285"/>
+    <line x1="670" y1="540" x2="670" y2="270" stroke-linecap="round"/>
+    <polygon points="670,260 662,275 678,275"/>
+    <line x1="730" y1="500" x2="730" y2="290" stroke-linecap="round"/>
+    <polygon points="730,280 722,295 738,295"/>
+    <line x1="790" y1="540" x2="790" y2="260" stroke-linecap="round"/>
+    <polygon points="790,250 782,265 798,265"/>
+  </g>
+
+  <!-- Vapour escaping the lyne arm -->
+  <g stroke="#D8A858" stroke-width="3" fill="#D8A858">
+    <line x1="900" y1="220" x2="1100" y2="170" stroke-linecap="round"/>
+    <polygon points="1100,170 1086,168 1090,182"/>
+  </g>
+
+  <!-- Annotations -->
+  <!-- Rising vapour annotation -->
+  <text x="950" y="350" font-family="Inter, sans-serif" font-size="26" fill="#D8A858" font-weight="600">rising vapour</text>
+  <text x="950" y="382" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" opacity="0.85">light esters survive the climb</text>
+  <line x1="940" y1="338" x2="800" y2="320" stroke="#D8A858" stroke-width="1.5"/>
+
+  <!-- Reflux annotation (lower left, away from scale) -->
+  <text x="240" y="700" font-family="Inter, sans-serif" font-size="32" fill="#B98432" font-weight="700">reflux (L)</text>
+  <text x="240" y="738" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5">heavy compounds</text>
+  <text x="240" y="768" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5">condense and fall back</text>
+  <text x="240" y="798" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">fusel oils, higher alcohols</text>
+  <line x1="440" y1="690" x2="580" y2="500" stroke="#B98432" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Distillate annotation -->
+  <text x="1430" y="140" font-family="Inter, sans-serif" font-size="32" fill="#D8A858" font-weight="700">distillate (D)</text>
+  <text x="1430" y="178" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5">light, ester-forward</text>
+  <text x="1430" y="208" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5">pear, citrus, white flowers</text>
+
+  <!-- Lyne arm annotation (above the lyne arm itself, well below title) -->
+  <text x="900" y="220" font-family="Inter, sans-serif" font-size="26" fill="#4A6B4F" font-weight="700">lyne arm angled UP</text>
+  <text x="900" y="252" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">further baffle: only the lightest fraction passes</text>
+  <line x1="1000" y1="195" x2="1050" y2="160" stroke="#4A6B4F" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Reflux equation -->
+  <rect x="1180" y="850" width="600" height="170" fill="#1f1a16" stroke="#B98432" stroke-width="2" rx="8"/>
+  <text x="1208" y="894" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">reflux ratio</text>
+  <text x="1208" y="958" font-family="Georgia, serif" font-size="64" fill="#F4E9D5" font-weight="700">R = L / D</text>
+  <text x="1208" y="994" font-family="Inter, sans-serif" font-size="20" fill="#B98432">tall still + upward lyne arm  →  R is high  →  spirit is light</text>
+
+  <!-- Person + year footer -->
+  <text x="120" y="1055" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">
+    Geometry: William Matheson, 1843. Maintained by Bill Lumsden (Director of Distilling, 2012–present). Drawing not to scale.
+  </text>
+</svg>

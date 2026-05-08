@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="lightBand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8A858" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#B98432" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="heavyBand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8B4A2B" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#6B3820" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="ds" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.6"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgG)"/>
+
+  <!-- Title -->
+  <text x="120" y="100" font-family="Georgia, serif" font-size="60" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">
+    Boiling points and the reflux cut
+  </text>
+  <text x="120" y="148" font-family="Inter, sans-serif" font-size="28" fill="#B98432">
+    What survives the climb up Glenmorangie's 5.14 m neck
+  </text>
+
+  <!-- Y axis: temperature -->
+  <line x1="200" y1="220" x2="200" y2="880" stroke="#B98432" stroke-width="3"/>
+  <text x="100" y="240" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="end">140 °C</text>
+  <text x="100" y="395" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="end">110 °C</text>
+  <text x="100" y="550" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="end">  80 °C</text>
+  <text x="100" y="705" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="end">  50 °C</text>
+  <text x="100" y="860" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="end">  20 °C</text>
+
+  <!-- Horizontal grid -->
+  <line x1="200" y1="240" x2="1800" y2="240" stroke="#3D2516" stroke-width="1" opacity="0.4"/>
+  <line x1="200" y1="395" x2="1800" y2="395" stroke="#3D2516" stroke-width="1" opacity="0.4"/>
+  <line x1="200" y1="550" x2="1800" y2="550" stroke="#3D2516" stroke-width="1" opacity="0.4"/>
+  <line x1="200" y1="705" x2="1800" y2="705" stroke="#3D2516" stroke-width="1" opacity="0.4"/>
+  <line x1="200" y1="860" x2="1800" y2="860" stroke="#3D2516" stroke-width="1" opacity="0.4"/>
+
+  <!-- Light fraction band: below cut line (passes through) -->
+  <!-- BP scale: 20°C @ y=860, 140°C @ y=240. So 1°C = (860-240)/120 = 5.17 px. y(t) = 860 - (t-20)*5.17 -->
+  <!-- Cut line at ~85°C: y = 860 - 65*5.17 = 524 -->
+  <rect x="200" y="240" width="1600" height="284" fill="url(#heavyBand)"/>
+  <rect x="200" y="524" width="1600" height="356" fill="url(#lightBand)"/>
+
+  <!-- Cut line: where the high-R reflux roughly stops things -->
+  <line x1="200" y1="524" x2="1800" y2="524" stroke="#4A6B4F" stroke-width="3" stroke-dasharray="14,6"/>
+  <text x="1820" y="510" font-family="Inter, sans-serif" font-size="24" fill="#4A6B4F" text-anchor="end" font-weight="700">~ high-R cut zone</text>
+  <text x="1820" y="540" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">heavies condense and fall back below this</text>
+
+  <!-- Compound markers: ethyl acetate 77, ethanol 78.4, esters/aldehydes band 80-110, fusel oils 132 -->
+
+  <!-- Ethyl acetate 77°C -->
+  <circle cx="500" cy="565" r="14" fill="#D8A858" filter="url(#ds)"/>
+  <text x="500" y="610" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5" text-anchor="middle" font-weight="700">ethyl acetate</text>
+  <text x="500" y="640" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" text-anchor="middle">77 °C  fruity ester</text>
+  <text x="500" y="666" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">passes</text>
+
+  <!-- Ethanol 78.4°C -->
+  <circle cx="780" cy="558" r="16" fill="#F4E9D5" filter="url(#ds)"/>
+  <text x="780" y="610" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5" text-anchor="middle" font-weight="700">ethanol</text>
+  <text x="780" y="640" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" text-anchor="middle">78.4 °C  the spirit</text>
+  <text x="780" y="666" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">passes</text>
+
+  <!-- Higher esters / aldehydes band (80-110°C, marker at midpoint 95°C) -->
+  <rect x="1010" y="395" width="160" height="78" fill="#B98432" opacity="0.7" rx="6" filter="url(#ds)"/>
+  <text x="1090" y="442" font-family="Inter, sans-serif" font-size="20" fill="#14110E" text-anchor="middle" font-weight="700">esters /</text>
+  <text x="1090" y="464" font-family="Inter, sans-serif" font-size="20" fill="#14110E" text-anchor="middle" font-weight="700">aldehydes</text>
+  <text x="1090" y="510" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" text-anchor="middle">80–110 °C</text>
+  <text x="1090" y="540" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">partial pass</text>
+
+  <!-- Fusel oils 132°C (isoamyl alcohol) -->
+  <circle cx="1430" cy="282" r="16" fill="#8B4A2B" filter="url(#ds)"/>
+  <text x="1430" y="340" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5" text-anchor="middle" font-weight="700">fusel oils</text>
+  <text x="1430" y="370" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" text-anchor="middle">132 °C  isoamyl alcohol</text>
+  <text x="1430" y="396" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">stays in the still</text>
+
+  <!-- X axis label -->
+  <text x="1000" y="940" font-family="Inter, sans-serif" font-size="24" fill="#8B9B82" text-anchor="middle">→ position along the still neck (heat at base, condenser at top)</text>
+
+  <!-- Side annotations -->
+  <text x="1840" y="320" font-family="Inter, sans-serif" font-size="28" fill="#8B4A2B" text-anchor="end" font-weight="700">heavy fraction</text>
+  <text x="1840" y="354" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">trickles back down: reflux</text>
+
+  <text x="1840" y="780" font-family="Inter, sans-serif" font-size="28" fill="#D8A858" text-anchor="end" font-weight="700">light fraction</text>
+  <text x="1840" y="814" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">reaches the condenser: distillate</text>
+
+  <!-- Footer / context -->
+  <line x1="120" y1="985" x2="1800" y2="985" stroke="#4A6B4F" stroke-width="1" opacity="0.4"/>
+  <text x="120" y="1025" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="600">
+    What survives the climb up the neck is what you taste.
+  </text>
+  <text x="120" y="1055" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">
+    Boiling points are reference values at 1 atm. Bill Lumsden's wood program, after 1995, addresses everything that happens after this stage.
+  </text>
+</svg>
