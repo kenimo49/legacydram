@@ -44,13 +44,21 @@ const blogPostingJsonLd = {
   dateModified: (updated ?? date).toISOString(),
   author: {
     '@type': 'Person',
+    '@id': 'https://kenimoto.dev/#person',
     name: 'Ken Imoto',
     url: 'https://kenimoto.dev/',
+    sameAs: [
+      'https://kenimoto.dev/',
+      'https://github.com/kenimo49',
+    ],
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Propel-Lab LLC',
+      url: 'https://propel-lab.co.jp/',
+    },
   },
   publisher: {
-    '@type': 'Organization',
-    name: 'LegacyDram',
-    url: `${siteUrl}/`,
+    '@id': `${siteUrl}/#organization`,
   },
   url: canonicalUrl,
   mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
@@ -61,10 +69,10 @@ const blogPostingJsonLd = {
 
 const homeUrl = lang === 'ja' ? `${siteUrl}/ja/` : `${siteUrl}/`;
 const blogUrl = lang === 'ja' ? `${siteUrl}/ja/blog/` : `${siteUrl}/blog/`;
+// category ページが存在しないため breadcrumb から省略 (codex 指摘対応)
 const breadcrumbItems = [
   { name: lang === 'ja' ? 'ホーム' : 'Home', url: homeUrl },
   { name: lang === 'ja' ? '記事' : 'Articles', url: blogUrl },
-  ...(category ? [{ name: categoryLabel(category), url: blogUrl }] : []),
   { name: title, url: canonicalUrl },
 ];
 const breadcrumbJsonLd = {

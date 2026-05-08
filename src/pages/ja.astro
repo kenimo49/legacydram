@@ -18,10 +18,25 @@ const websiteJsonLd = {
   url: `${siteUrl}/ja/`,
   description: 'ウィスキーを「誰がどんな決断で作ったか」から読み解くキュレーション・メディア。',
   inLanguage: 'ja-JP',
-  publisher: {
+  publisher: { '@id': `${siteUrl}/#organization` },
+};
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: 'LegacyDram',
+  url: `${siteUrl}/`,
+  logo: `${siteUrl}/favicon.svg`,
+  founder: {
+    '@type': 'Person',
+    '@id': 'https://kenimoto.dev/#person',
+    name: 'Ken Imoto',
+    url: 'https://kenimoto.dev/',
+  },
+  parentOrganization: {
     '@type': 'Organization',
-    name: 'LegacyDram',
-    url: `${siteUrl}/`,
+    name: 'Propel-Lab LLC',
+    url: 'https://propel-lab.co.jp/',
   },
 };
 ---
@@ -33,7 +48,7 @@ const websiteJsonLd = {
   ogUrl="https://legacydram.com/ja/"
   ogDescription="ウィスキーを「誰がどんな決断で作ったか」から読み解くキュレーション・メディア。"
   alternates={staticAlternates('/')}
-  jsonLd={websiteJsonLd}
+  jsonLd={[websiteJsonLd, orgJsonLd]}
 >
   <Nav lang="ja" current="home" />
 

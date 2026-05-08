@@ -18,20 +18,18 @@ const websiteJsonLd = {
   url: `${siteUrl}/`,
   description: 'A curated whisky media for engineers and the people who love a story behind a glass.',
   inLanguage: 'en-US',
-  publisher: {
-    '@type': 'Organization',
-    name: 'LegacyDram',
-    url: `${siteUrl}/`,
-  },
+  publisher: { '@id': `${siteUrl}/#organization` },
 };
 const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
   name: 'LegacyDram',
   url: `${siteUrl}/`,
   logo: `${siteUrl}/favicon.svg`,
   founder: {
     '@type': 'Person',
+    '@id': 'https://kenimoto.dev/#person',
     name: 'Ken Imoto',
     url: 'https://kenimoto.dev/',
   },
