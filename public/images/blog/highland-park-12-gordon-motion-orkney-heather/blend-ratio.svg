@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="peatedFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8A858"/>
+      <stop offset="1" stop-color="#B98432"/>
+    </linearGradient>
+    <linearGradient id="unpeatedFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A2C20"/>
+      <stop offset="1" stop-color="#2A1F18"/>
+    </linearGradient>
+    <linearGradient id="bottleFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8B4A2B"/>
+      <stop offset="1" stop-color="#5A2E1A"/>
+    </linearGradient>
+    <linearGradient id="amberCardHL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8A858" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#B98432" stop-opacity="0.22"/>
+    </linearGradient>
+    <filter id="ds" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="3"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="120" y="100" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">The 80/20 dilution</text>
+  <text x="120" y="148" font-family="Inter, sans-serif" font-size="26" fill="#8B9B82">Highland Park's mash bill is mostly unpeated. The smoke you taste is what survives the dilution.</text>
+
+  <!-- Stage labels at top -->
+  <text x="280" y="218" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" letter-spacing="2" text-anchor="middle">STAGE 1</text>
+  <text x="280" y="252" font-family="Inter, sans-serif" font-size="28" fill="#F4E9D5" font-weight="700" text-anchor="middle">The malt bill</text>
+
+  <text x="960" y="218" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" letter-spacing="2" text-anchor="middle">STAGE 2</text>
+  <text x="960" y="252" font-family="Inter, sans-serif" font-size="28" fill="#F4E9D5" font-weight="700" text-anchor="middle">Mashed and fermented together</text>
+
+  <text x="1640" y="218" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" letter-spacing="2" text-anchor="middle">STAGE 3</text>
+  <text x="1640" y="252" font-family="Inter, sans-serif" font-size="28" fill="#F4E9D5" font-weight="700" text-anchor="middle">Bottle, 12 years on</text>
+
+  <!-- LEFT: Stacked bar showing 20/80 -->
+  <!-- Frame for stack -->
+  <rect x="180" y="300" width="200" height="500" fill="none" stroke="#4A6B4F" stroke-width="1" opacity="0.3"/>
+
+  <!-- Peated portion (top 20%) -->
+  <rect x="180" y="300" width="200" height="100" fill="url(#peatedFill)" filter="url(#ds)"/>
+  <text x="280" y="358" font-family="Inter, sans-serif" font-size="32" fill="#14110E" font-weight="900" text-anchor="middle">20–25%</text>
+  <text x="280" y="386" font-family="Inter, sans-serif" font-size="20" fill="#14110E" font-weight="700" text-anchor="middle">peated malt</text>
+
+  <!-- Unpeated portion (bottom 80%) -->
+  <rect x="180" y="400" width="200" height="400" fill="url(#unpeatedFill)" stroke="#4A6B4F" stroke-width="1" opacity="0.95"/>
+  <text x="280" y="586" font-family="Inter, sans-serif" font-size="44" fill="#F4E9D5" font-weight="900" text-anchor="middle">75–80%</text>
+  <text x="280" y="624" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" font-weight="700" text-anchor="middle">unpeated malt</text>
+
+  <!-- Annotations to the right of the stack -->
+  <line x1="395" y1="350" x2="450" y2="350" stroke="#D8A858" stroke-width="2"/>
+  <text x="465" y="346" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" font-weight="700">Floor-malted on site</text>
+  <text x="465" y="376" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">Hobbister peat kiln, 8 hr</text>
+  <text x="465" y="402" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">→ 30–40 ppm in the malt</text>
+
+  <line x1="395" y1="600" x2="450" y2="600" stroke="#8B9B82" stroke-width="2"/>
+  <text x="465" y="596" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="700">Bought in from maltsters</text>
+  <text x="465" y="626" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">commercial unpeated barley</text>
+  <text x="465" y="652" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">→ 0 ppm phenol</text>
+
+  <!-- Arrow to middle -->
+  <path d="M 760 530 L 870 530" stroke="#D8A858" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#D8A858"/>
+    </marker>
+  </defs>
+
+  <!-- MIDDLE: Mash + ferment + distill (combined) -->
+  <rect x="800" y="300" width="320" height="500" rx="14" fill="#2A1F18" stroke="#4A6B4F" stroke-width="2" filter="url(#ds)"/>
+  <text x="960" y="364" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" font-weight="700" text-anchor="middle">Combined mash bill</text>
+  <text x="960" y="404" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">peated + unpeated malt</text>
+  <text x="960" y="430" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">ground together</text>
+
+  <line x1="850" y1="470" x2="1070" y2="470" stroke="#4A6B4F" stroke-width="1" opacity="0.5"/>
+
+  <text x="960" y="520" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">→ wash → wash still</text>
+  <text x="960" y="552" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">→ spirit still</text>
+  <text x="960" y="584" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">→ new make</text>
+
+  <line x1="850" y1="624" x2="1070" y2="624" stroke="#4A6B4F" stroke-width="1" opacity="0.5"/>
+
+  <text x="960" y="676" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" font-weight="700" text-anchor="middle">phenol carries through</text>
+  <text x="960" y="710" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="middle">but is now diluted</text>
+  <text x="960" y="744" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="middle">across the full mash</text>
+
+  <!-- Arrow to right -->
+  <path d="M 1140 530 L 1250 530" stroke="#D8A858" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- RIGHT: Bottle outcome -->
+  <rect x="1320" y="300" width="500" height="500" rx="14" fill="url(#amberCardHL)" stroke="#D8A858" stroke-width="3" filter="url(#ds)"/>
+
+  <!-- Highland Park 12 outcome -->
+  <text x="1570" y="370" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" letter-spacing="2" font-weight="700" text-anchor="middle">HIGHLAND PARK 12</text>
+
+  <text x="1570" y="448" font-family="Georgia, serif" font-size="84" fill="#F4E9D5" font-weight="900" text-anchor="middle">4–6 ppm</text>
+  <text x="1570" y="492" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">final phenol level in the bottle</text>
+
+  <line x1="1380" y1="540" x2="1760" y2="540" stroke="#D8A858" stroke-width="1" opacity="0.4"/>
+
+  <text x="1570" y="592" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="700" text-anchor="middle">Reference points</text>
+
+  <text x="1380" y="638" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Bowmore 12 (Islay)</text>
+  <text x="1760" y="638" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="end" font-weight="700">~ 25 ppm in malt</text>
+
+  <text x="1380" y="676" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Talisker 10 (Skye)</text>
+  <text x="1760" y="676" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="end" font-weight="700">~ 18–22 ppm in malt</text>
+
+  <text x="1380" y="714" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Lagavulin 16 (Islay)</text>
+  <text x="1760" y="714" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="end" font-weight="700">~ 35 ppm in malt</text>
+
+  <text x="1570" y="772" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">HP12 sits well below them on the dial.</text>
+
+  <!-- Footer -->
+  <line x1="120" y1="900" x2="1800" y2="900" stroke="#4A6B4F" stroke-width="1" opacity="0.4"/>
+  <text x="120" y="950" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5" font-weight="600">
+    The phenol you drink is the phenol you grew, divided by five.
+  </text>
+  <text x="120" y="984" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">
+    The peat is a register, not a foreground. Take it out and Highland Park stops being Highland Park.
+  </text>
+  <text x="120" y="1018" font-family="Inter, sans-serif" font-size="18" fill="#5C6F5F">
+    legacydram.com — Highland Park 12 · Hobbister Peat · 80/20 malt blend
+  </text>
+</svg>

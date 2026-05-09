@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="amberCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B98432" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#8B4A2B" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="amberCardHL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8A858" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#B98432" stop-opacity="0.22"/>
+    </linearGradient>
+    <filter id="ds" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="3"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="120" y="100" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">Three peats, three plants, three smokes</text>
+  <text x="120" y="148" font-family="Inter, sans-serif" font-size="26" fill="#8B9B82">Same ppm does not mean same flavour. The bog decides what survives the kiln.</text>
+
+  <!-- Three panels: Orkney (highlighted), Islay, Skye -->
+
+  <!-- ORKNEY (highlighted - article focus) -->
+  <rect x="120" y="200" width="540" height="660" rx="14" fill="url(#amberCardHL)" stroke="#D8A858" stroke-width="3" filter="url(#ds)"/>
+  <text x="160" y="262" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" font-weight="700" letter-spacing="2">ORKNEY · HOBBISTER MOOR</text>
+  <text x="160" y="312" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#F4E9D5">Highland Park</text>
+  <text x="160" y="350" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">7 miles south of the distillery · inland moor</text>
+
+  <line x1="160" y1="384" x2="620" y2="384" stroke="#D8A858" stroke-width="1" opacity="0.4"/>
+
+  <text x="160" y="430" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" font-weight="700">Plants in the bog</text>
+  <text x="160" y="466" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Heather (calluna vulgaris)</text>
+  <text x="160" y="500" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Grasses, mosses</text>
+  <text x="160" y="534" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">No coastal seaweed. No sphagnum dominance.</text>
+
+  <text x="160" y="600" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" font-weight="700">Phenols in the smoke</text>
+  <text x="160" y="636" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Guaiacol · 4-vinylguaiacol</text>
+  <text x="160" y="670" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Lignin breakdown · sweet</text>
+
+  <text x="160" y="736" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" font-weight="700">In the glass</text>
+  <text x="160" y="772" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Honey · dry grass · warm wool</text>
+  <text x="160" y="806" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Floor-malted to 30–40 ppm,</text>
+  <text x="160" y="836" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">diluted 1:4 with unpeated malt</text>
+
+  <!-- ISLAY -->
+  <rect x="690" y="200" width="540" height="660" rx="14" fill="url(#amberCard)" stroke="#8B4A2B" stroke-width="2" filter="url(#ds)"/>
+  <text x="730" y="262" font-family="Inter, sans-serif" font-size="22" fill="#8B4A2B" font-weight="700" letter-spacing="2">ISLAY · MACHRIE MOSS</text>
+  <text x="730" y="312" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#F4E9D5">Bowmore / Lagavulin</text>
+  <text x="730" y="350" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Coastal bog · sea-facing</text>
+
+  <line x1="730" y1="384" x2="1190" y2="384" stroke="#8B4A2B" stroke-width="1" opacity="0.4"/>
+
+  <text x="730" y="430" font-family="Inter, sans-serif" font-size="22" fill="#8B4A2B" font-weight="700">Plants in the bog</text>
+  <text x="730" y="466" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Sphagnum mosses</text>
+  <text x="730" y="500" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Decayed seaweed</text>
+  <text x="730" y="534" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Salt spray and tidal organics in the layers.</text>
+
+  <text x="730" y="600" font-family="Inter, sans-serif" font-size="22" fill="#8B4A2B" font-weight="700">Phenols in the smoke</text>
+  <text x="730" y="636" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Cresols · iodine phenols</text>
+  <text x="730" y="670" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Maritime · medicinal</text>
+
+  <text x="730" y="736" font-family="Inter, sans-serif" font-size="22" fill="#8B4A2B" font-weight="700">In the glass</text>
+  <text x="730" y="772" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Damp bonfire · sea-rope · TCP</text>
+  <text x="730" y="806" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Bowmore 12 ≈ 25 ppm,</text>
+  <text x="730" y="836" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Lagavulin 16 ≈ 35 ppm in malt</text>
+
+  <!-- SKYE -->
+  <rect x="1260" y="200" width="540" height="660" rx="14" fill="url(#amberCard)" stroke="#4A6B4F" stroke-width="2" filter="url(#ds)"/>
+  <text x="1300" y="262" font-family="Inter, sans-serif" font-size="22" fill="#7AA084" font-weight="700" letter-spacing="2">SKYE · TALISKER</text>
+  <text x="1300" y="312" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#F4E9D5">Talisker</text>
+  <text x="1300" y="350" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Mixed bog · cliff-side · spray-fed</text>
+
+  <line x1="1300" y1="384" x2="1760" y2="384" stroke="#4A6B4F" stroke-width="1" opacity="0.4"/>
+
+  <text x="1300" y="430" font-family="Inter, sans-serif" font-size="22" fill="#7AA084" font-weight="700">Plants in the bog</text>
+  <text x="1300" y="466" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Mixed grasses, mosses</text>
+  <text x="1300" y="500" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Some sphagnum</text>
+  <text x="1300" y="534" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Coastal but less seaweed than Islay.</text>
+
+  <text x="1300" y="600" font-family="Inter, sans-serif" font-size="22" fill="#7AA084" font-weight="700">Phenols in the smoke</text>
+  <text x="1300" y="636" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Mixed phenol profile</text>
+  <text x="1300" y="670" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Pepper / pyrazine notes</text>
+
+  <text x="1300" y="736" font-family="Inter, sans-serif" font-size="22" fill="#7AA084" font-weight="700">In the glass</text>
+  <text x="1300" y="772" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5">Black pepper · wet stone · brine</text>
+  <text x="1300" y="806" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Talisker 10 ≈ 18–22 ppm,</text>
+  <text x="1300" y="836" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">distillation pepper amplifies it</text>
+
+  <!-- Footer -->
+  <line x1="120" y1="930" x2="1800" y2="930" stroke="#4A6B4F" stroke-width="1" opacity="0.4"/>
+  <text x="120" y="980" font-family="Inter, sans-serif" font-size="24" fill="#F4E9D5" font-weight="600">
+    The phenol you taste was a plant before it was a number.
+  </text>
+  <text x="120" y="1014" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">
+    ppm values are nominal malt specs, not bottle phenol levels (Highland Park 12 finishes around 4–6 ppm after dilution).
+  </text>
+  <text x="120" y="1048" font-family="Inter, sans-serif" font-size="18" fill="#5C6F5F">
+    legacydram.com — Highland Park 12 · Hobbister Peat
+  </text>
+</svg>

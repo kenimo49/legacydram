@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="amberCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B98432" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#8B4A2B" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="amberCardHL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8A858" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#B98432" stop-opacity="0.22"/>
+    </linearGradient>
+    <linearGradient id="lossCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5A2E1A" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#3A1F12" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="ds" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="3"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="120" y="92" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">John Glaser's losing fights, and the workaround that survived</text>
+  <text x="120" y="138" font-family="Inter, sans-serif" font-size="24" fill="#8B9B82">Three confrontations with the SWA between 2005 and 2017. None of them changed the regulation. The third one moved the disclosure to a PDF.</text>
+
+  <!-- Horizontal timeline axis -->
+  <line x1="160" y1="430" x2="1800" y2="430" stroke="#4A6B4F" stroke-width="2" opacity="0.5"/>
+
+  <!-- Year ticks -->
+  <g font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">
+    <line x1="220" y1="425" x2="220" y2="440" stroke="#8B9B82" stroke-width="2"/><text x="220" y="468">2000</text>
+    <line x1="430" y1="425" x2="430" y2="440" stroke="#8B9B82" stroke-width="2"/><text x="430" y="468">2005</text>
+    <line x1="640" y1="425" x2="640" y2="440" stroke="#8B9B82" stroke-width="2"/><text x="640" y="468">2009</text>
+    <line x1="950" y1="425" x2="950" y2="440" stroke="#8B9B82" stroke-width="2"/><text x="950" y="468">2015</text>
+    <line x1="1130" y1="425" x2="1130" y2="440" stroke="#8B9B82" stroke-width="2"/><text x="1130" y="468">2016</text>
+    <line x1="1280" y1="425" x2="1280" y2="440" stroke="#8B9B82" stroke-width="2"/><text x="1280" y="468">2017</text>
+    <line x1="1620" y1="425" x2="1620" y2="440" stroke="#8B9B82" stroke-width="2"/><text x="1620" y="468">2024</text>
+  </g>
+
+  <!-- Event dots -->
+  <circle cx="220" cy="430" r="10" fill="#D8A858"/>
+  <circle cx="430" cy="430" r="10" fill="#8B4A2B"/>
+  <circle cx="640" cy="430" r="10" fill="#7AA084"/>
+  <circle cx="950" cy="430" r="10" fill="#8B4A2B"/>
+  <circle cx="1130" cy="430" r="10" fill="#D8A858"/>
+  <circle cx="1280" cy="430" r="10" fill="#5A2E1A"/>
+  <circle cx="1620" cy="430" r="10" fill="#5A2E1A"/>
+
+  <!-- Above the line: founding & wins -->
+  <!-- 2000 founding -->
+  <rect x="120" y="200" width="220" height="170" rx="10" fill="url(#amberCardHL)" stroke="#D8A858" stroke-width="2" filter="url(#ds)"/>
+  <text x="230" y="240" font-family="Inter, sans-serif" font-size="18" fill="#D8A858" font-weight="700" text-anchor="middle" letter-spacing="2">FOUNDING</text>
+  <text x="230" y="278" font-family="Georgia, serif" font-size="26" fill="#F4E9D5" font-weight="700" text-anchor="middle">Compass Box</text>
+  <text x="230" y="312" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">London, kitchen table</text>
+  <text x="230" y="342" font-family="Inter, sans-serif" font-size="18" fill="#8B9B82" text-anchor="middle">first release: Hedonism</text>
+  <line x1="230" y1="370" x2="220" y2="425" stroke="#D8A858" stroke-width="1.5"/>
+
+  <!-- 2009 Spice Tree redesign (a small win) -->
+  <rect x="540" y="200" width="220" height="170" rx="10" fill="rgba(74,107,79,0.16)" stroke="#7AA084" stroke-width="2" filter="url(#ds)"/>
+  <text x="650" y="240" font-family="Inter, sans-serif" font-size="18" fill="#7AA084" font-weight="700" text-anchor="middle" letter-spacing="2">REDESIGN</text>
+  <text x="650" y="278" font-family="Georgia, serif" font-size="26" fill="#F4E9D5" font-weight="700" text-anchor="middle">Spice Tree v2</text>
+  <text x="650" y="312" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">Vosges French oak heads</text>
+  <text x="650" y="342" font-family="Inter, sans-serif" font-size="18" fill="#8B9B82" text-anchor="middle">workaround within SWR</text>
+  <line x1="650" y1="370" x2="640" y2="425" stroke="#7AA084" stroke-width="1.5"/>
+
+  <!-- 2016 Campaign launch (proposal) -->
+  <rect x="1020" y="200" width="220" height="170" rx="10" fill="url(#amberCardHL)" stroke="#D8A858" stroke-width="2" filter="url(#ds)"/>
+  <text x="1130" y="240" font-family="Inter, sans-serif" font-size="18" fill="#D8A858" font-weight="700" text-anchor="middle" letter-spacing="2">PROPOSAL</text>
+  <text x="1130" y="278" font-family="Georgia, serif" font-size="22" fill="#F4E9D5" font-weight="700" text-anchor="middle">Transparency Campaign</text>
+  <text x="1130" y="312" font-family="Inter, sans-serif" font-size="18" fill="#F4E9D5" text-anchor="middle">3,000+ signatures</text>
+  <text x="1130" y="342" font-family="Inter, sans-serif" font-size="18" fill="#8B9B82" text-anchor="middle">Bruichladdich + Tomatin back it</text>
+  <line x1="1130" y1="370" x2="1130" y2="425" stroke="#D8A858" stroke-width="1.5"/>
+
+  <!-- Below the line: confrontations & losses -->
+  <!-- 2005-06 Spice Tree v1 - SWA blocks -->
+  <rect x="320" y="500" width="220" height="170" rx="10" fill="url(#lossCard)" stroke="#8B4A2B" stroke-width="2" filter="url(#ds)"/>
+  <line x1="430" y1="500" x2="430" y2="435" stroke="#8B4A2B" stroke-width="1.5"/>
+  <text x="430" y="540" font-family="Inter, sans-serif" font-size="18" fill="#C77A4F" font-weight="700" text-anchor="middle" letter-spacing="2">CLASH 1</text>
+  <text x="430" y="578" font-family="Georgia, serif" font-size="24" fill="#F4E9D5" font-weight="700" text-anchor="middle">Spice Tree v1</text>
+  <text x="430" y="608" font-family="Inter, sans-serif" font-size="18" fill="#F4E9D5" text-anchor="middle">French oak inserts inside</text>
+  <text x="430" y="632" font-family="Inter, sans-serif" font-size="18" fill="#F4E9D5" text-anchor="middle">ex-bourbon casks</text>
+  <text x="430" y="658" font-family="Inter, sans-serif" font-size="18" fill="#C77A4F" text-anchor="middle" font-weight="700">SWA: "additional flavouring"</text>
+
+  <!-- 2015 Disclosure - SWA blocks -->
+  <rect x="840" y="500" width="220" height="170" rx="10" fill="url(#lossCard)" stroke="#8B4A2B" stroke-width="2" filter="url(#ds)"/>
+  <line x1="950" y1="500" x2="950" y2="435" stroke="#8B4A2B" stroke-width="1.5"/>
+  <text x="950" y="540" font-family="Inter, sans-serif" font-size="18" fill="#C77A4F" font-weight="700" text-anchor="middle" letter-spacing="2">CLASH 2</text>
+  <text x="950" y="578" font-family="Georgia, serif" font-size="22" fill="#F4E9D5" font-weight="700" text-anchor="middle">Web disclosure</text>
+  <text x="950" y="608" font-family="Inter, sans-serif" font-size="18" fill="#F4E9D5" text-anchor="middle">Flaming Heart 15th /</text>
+  <text x="950" y="632" font-family="Inter, sans-serif" font-size="18" fill="#F4E9D5" text-anchor="middle">"Not a Luxury Whisky"</text>
+  <text x="950" y="658" font-family="Inter, sans-serif" font-size="18" fill="#C77A4F" text-anchor="middle" font-weight="700">SWA: EC 110/2008 Art 12.3</text>
+
+  <!-- 2017 Campaign rejected -->
+  <rect x="1180" y="500" width="220" height="170" rx="10" fill="url(#lossCard)" stroke="#8B4A2B" stroke-width="2" filter="url(#ds)"/>
+  <line x1="1280" y1="500" x2="1280" y2="435" stroke="#8B4A2B" stroke-width="1.5"/>
+  <text x="1290" y="540" font-family="Inter, sans-serif" font-size="18" fill="#C77A4F" font-weight="700" text-anchor="middle" letter-spacing="2">REJECTED</text>
+  <text x="1290" y="578" font-family="Georgia, serif" font-size="22" fill="#F4E9D5" font-weight="700" text-anchor="middle">SWA verdict</text>
+  <text x="1290" y="608" font-family="Inter, sans-serif" font-size="18" fill="#F4E9D5" text-anchor="middle">"no industry consensus"</text>
+  <text x="1290" y="632" font-family="Inter, sans-serif" font-size="18" fill="#F4E9D5" text-anchor="middle">"law is fit for purpose"</text>
+  <text x="1290" y="658" font-family="Inter, sans-serif" font-size="18" fill="#C77A4F" text-anchor="middle" font-weight="700">campaign ends</text>
+
+  <!-- 2024 retirement -->
+  <rect x="1480" y="500" width="280" height="170" rx="10" fill="url(#lossCard)" stroke="#8B4A2B" stroke-width="2" filter="url(#ds)"/>
+  <line x1="1620" y1="500" x2="1620" y2="435" stroke="#8B4A2B" stroke-width="1.5"/>
+  <text x="1620" y="540" font-family="Inter, sans-serif" font-size="18" fill="#C77A4F" font-weight="700" text-anchor="middle" letter-spacing="2">RETIREMENT</text>
+  <text x="1620" y="578" font-family="Georgia, serif" font-size="22" fill="#F4E9D5" font-weight="700" text-anchor="middle">29 February 2024</text>
+  <text x="1620" y="608" font-family="Inter, sans-serif" font-size="18" fill="#F4E9D5" text-anchor="middle">Glaser steps down (23 yrs)</text>
+  <text x="1620" y="632" font-family="Inter, sans-serif" font-size="18" fill="#F4E9D5" text-anchor="middle">Sept 2024: core range cut to 4</text>
+  <text x="1620" y="658" font-family="Inter, sans-serif" font-size="18" fill="#C77A4F" text-anchor="middle" font-weight="700">Hedonism / Spice Tree → limited</text>
+
+  <!-- Bottom: the surviving outcome -->
+  <rect x="120" y="760" width="1680" height="180" rx="14" fill="url(#amberCardHL)" stroke="#D8A858" stroke-width="3" filter="url(#ds)"/>
+  <text x="160" y="810" font-family="Inter, sans-serif" font-size="20" fill="#D8A858" font-weight="700" letter-spacing="2">THE WORKAROUND THAT SURVIVED</text>
+  <text x="160" y="858" font-family="Georgia, serif" font-size="36" fill="#F4E9D5" font-weight="700">Disclosure moved from the bottle label to a downloadable PDF.</text>
+  <text x="160" y="900" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5">SWR was not amended. Compass Box now publishes full cask composition (distillery, age, type, percentage) on its website's factsheet pages.</text>
+  <text x="160" y="928" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">Same information, different layer. The bottle still says only the youngest cask's age.</text>
+
+  <!-- Footer -->
+  <text x="120" y="1010" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="600">
+    What he could not write on the label, he wrote on the blog.
+  </text>
+  <text x="120" y="1042" font-family="Inter, sans-serif" font-size="18" fill="#5C6F5F">
+    legacydram.com — John Glaser · Compass Box · 2000–2024
+  </text>
+</svg>
