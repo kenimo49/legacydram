@@ -6,6 +6,7 @@ lang: ja
 category: tasting
 tags: ["Ichiro's Malt", "Chichibu", "肥土伊知郎", "Hanyu", "ミズナラ", "Quercus crispula", "Venture Whisky", "Japanese whisky"]
 featured: false
+og_image: "/images/blog/ichiros-malt-akuto-chichibu-mizunara/timeline.png"
 canonical_url: "https://legacydram.com/ja/blog/ichiros-malt-akuto-chichibu-mizunara/"
 cross_posted_to: []
 ---

@@ -6,6 +6,7 @@ lang: en
 category: craft
 tags: ["Jim Swan", "STR cask", "Penderyn", "Kavalan", "Amrut", "Lindores Abbey", "Cotswolds", "tropical maturation", "oak chemistry", "lignin pyrolysis", "consultancy"]
 featured: false
+og_image: "/images/blog/jim-swan-str-cask-new-world-distilleries/str-three-stages.png"
 canonical_url: "https://legacydram.com/blog/jim-swan-str-cask-new-world-distilleries/"
 cross_posted_to: []
 ---

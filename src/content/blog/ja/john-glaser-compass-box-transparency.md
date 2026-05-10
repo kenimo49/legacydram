@@ -6,6 +6,7 @@ lang: ja
 category: people
 tags: ["John Glaser", "Compass Box", "SWA", "Scotch Whisky Regulations", "transparency", "Spice Tree", "Flaming Heart", "blender"]
 featured: false
+og_image: "/images/blog/john-glaser-compass-box-transparency/timeline.png"
 canonical_url: "https://legacydram.com/ja/blog/john-glaser-compass-box-transparency/"
 ---
 

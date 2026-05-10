@@ -6,6 +6,7 @@ lang: en
 category: people
 tags: ["Frank McHardy", "Springbank", "Campbeltown", "silent years", "Glengyle", "Kilkerran", "1980s", "floor malting"]
 featured: false
+og_image: "/images/blog/frank-mchardy-springbank-silent-years/timeline.png"
 canonical_url: "https://legacydram.com/blog/frank-mchardy-springbank-silent-years/"
 ---
 

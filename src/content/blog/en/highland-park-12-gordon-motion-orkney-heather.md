@@ -6,6 +6,7 @@ lang: en
 category: tasting
 tags: ["Highland Park", "Gordon Motion", "Marc Watson", "Hobbister", "Orkney", "peat", "Edrington", "tasting"]
 featured: false
+og_image: "/images/blog/highland-park-12-gordon-motion-orkney-heather/peat-geography.png"
 canonical_url: "https://legacydram.com/blog/highland-park-12-gordon-motion-orkney-heather/"
 ---
 

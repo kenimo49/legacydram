@@ -6,6 +6,7 @@ lang: ja
 category: tasting
 tags: ["Glenfiddich", "Glenfiddich 12", "Brian Kinsman", "David Stewart", "Speyside", "William Grant & Sons", "consistency"]
 featured: false
+og_image: "/images/blog/glenfiddich-12-brian-kinsman-consistency/timeline.png"
 canonical_url: "https://legacydram.com/ja/blog/glenfiddich-12-brian-kinsman-consistency/"
 ---
 

@@ -6,6 +6,7 @@ lang: ja
 category: craft
 tags: ["Jim McEwan", "Bruichladdich", "Octomore", "Ardnahoe", "Bowmore", "ピート", "Islay", "フェノール", "ppm"]
 featured: false
+og_image: "/images/blog/jim-mcewan-octomore-ardnahoe/timeline.png"
 canonical_url: "https://legacydram.com/ja/blog/jim-mcewan-octomore-ardnahoe/"
 ---
 

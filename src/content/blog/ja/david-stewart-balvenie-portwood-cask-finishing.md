@@ -6,6 +6,7 @@ lang: ja
 category: people
 tags: ["David Stewart", "Balvenie", "Balvenie 21 PortWood", "DoubleWood", "cask finishing", "Kelsey McKechnie", "William Grant & Sons", "Speyside"]
 featured: false
+og_image: "/images/blog/david-stewart-balvenie-portwood-cask-finishing/cask-finishing.png"
 canonical_url: "https://legacydram.com/ja/blog/david-stewart-balvenie-portwood-cask-finishing/"
 ---
 

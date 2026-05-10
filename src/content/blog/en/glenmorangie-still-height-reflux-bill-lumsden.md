@@ -6,6 +6,7 @@ lang: en
 category: craft
 tags: ["Bill Lumsden", "Glenmorangie", "distillation", "reflux ratio", "still design", "wood finishing", "Highland", "LVMH"]
 featured: false
+og_image: "/images/blog/glenmorangie-still-height-reflux-bill-lumsden/still-cross-section.png"
 canonical_url: "https://legacydram.com/blog/glenmorangie-still-height-reflux-bill-lumsden/"
 ---
 
