@@ -20,7 +20,7 @@ canonical_url: "https://legacydram.com/ja/blog/glenfiddich-12-brian-kinsman-cons
 
 Glenfiddich 12 は1963年に発売されました。これは銘柄の発売年であると同時に、**「シングルモルト」というカテゴリが商業的に成立した年**でもあります。それ以前のスコッチは基本的にブレンデッドで、単一蒸留所のモルトを瓶詰めして輸出する発想は業界の常識ではなかった。Sandy Grant Gordon と Charles Grant Gordon の兄弟が下したのは「個性が強すぎてブレンデッドに勝てない」と言われていたシングルモルトを国際市場に出すという博打で、これがその後60年のシングルモルト市場の起点になります。
 
-同じ William Grant & Sons に、その前年の1962年、17歳の David Stewart が見習いとして入社しています。Stewart は後に Glenfiddich と Balvenie 両方の Malt Master になり、1980年代に「カスクフィニッシュ(二度樽熟成)」を業界に持ち込んだ人物です。Glenfiddich 15 Solera Reserve のソレラ熟成方式を商品化したのも彼です。シングルモルトというカテゴリの最初の60年は、ほぼこの一人の在籍期間と重なっています。
+同じ William Grant & Sons に、その前年の1962年、17歳の David Stewart が見習いとして入社しています。Stewart は後に Glenfiddich と Balvenie 両方の Malt Master になり、1980年代に「カスクフィニッシュ(二度樽熟成)」を業界に持ち込んだ人物です。Glenfiddich 15 Solera Reserve のソレラ熟成方式を商品化したのも彼です。シングルモルトというカテゴリの最初の60年は、ほぼこの一人の在籍期間と重なっています。Stewart の仕事については [David Stewart と Balvenie 21 PortWood の記事](/ja/blog/david-stewart-balvenie-portwood-cask-finishing/) で別途扱っています。
 
 ## 2009年 ― Stewart から Kinsman へ
 

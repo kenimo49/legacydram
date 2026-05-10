@@ -14,7 +14,7 @@ canonical_url: "https://legacydram.com/ja/blog/david-stewart-balvenie-portwood-c
 
 思い出してしまうと、ただ飲むのが難しくなる。Stewart は2023年秋に Balvenie の Malt Master を後継の Kelsey McKechnie に譲り、その時点で William Grant & Sons 在籍が **61年**になっていました。62年勤続でリレーされたものを、私は3年熟成のポートワインカスクの中で味わっている。この距離感は、瓶の値段ではない別の重さを持ちます。
 
-![David Stewart MBE の William Grant & Sons 在籍62年を示すキャリア指標図。1962年に17歳でapprenticeとして入社し、2023年秋にBalvenie Malt Master をKelsey McKechnieに譲渡するまで62年勤続した。1996年に Balvenie 21 PortWood を商品化し、1980年代に開発した「二度樽熟成 (cask finishing)」を業界に持ち込んだ。Glenfiddich Malt Master を Brian Kinsman へ (2009年)、Balvenie を Kelsey McKechnie へ (2023年) と2人の後継者を育てた一人で発明しふたりを育てた男のキャリア。](/images/blog/david-stewart-balvenie-portwood-cask-finishing/career.png)
+![David Stewart MBE の William Grant & Sons 勤続62年 (1962年から現在まで) を示すキャリア指標図。1962年に17歳でapprenticeとして入社し、2023年秋にBalvenie Malt Master をKelsey McKechnieに譲渡してからも Honorary Ambassador として在籍を継続している。1996年に Balvenie 21 PortWood を商品化し、1980年代に開発した「二度樽熟成 (cask finishing)」を業界に持ち込んだ。Glenfiddich Malt Master を Brian Kinsman へ (2009年)、Balvenie を Kelsey McKechnie へ (2023年) と2人の後継者を育てた、一人で発明しふたりを育てた男のキャリア。](/images/blog/david-stewart-balvenie-portwood-cask-finishing/career.png)
 
 ## 1996年 ― 「カスクフィニッシュ」がまだ業界用語ではなかった頃
 
