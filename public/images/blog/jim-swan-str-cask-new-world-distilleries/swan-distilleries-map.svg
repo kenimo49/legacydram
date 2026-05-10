@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <radialGradient id="dotG" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F4E9D5"/>
+      <stop offset="1" stop-color="#B98432"/>
+    </radialGradient>
+    <filter id="dsDot" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgG)"/>
+
+  <!-- Title -->
+  <text x="120" y="100" font-family="Georgia, serif" font-size="60" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">
+    Five continents, one advisor
+  </text>
+  <text x="120" y="148" font-family="Inter, sans-serif" font-size="28" fill="#B98432">
+    Distilleries Dr. Jim Swan helped design or built — selected list, founding year shown
+  </text>
+
+  <!-- Simplified world map (rectangular continental silhouettes, abstract) -->
+  <!-- North America -->
+  <path d="M 200 300 Q 250 280 320 290 L 400 280 L 470 310 L 510 380 L 490 450 L 430 470 L 360 460 L 290 430 L 240 380 Z"
+        fill="#3D2516" opacity="0.5" stroke="#4A6B4F" stroke-width="1.5"/>
+  <text x="350" y="385" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle" opacity="0.7">North America</text>
+
+  <!-- Europe -->
+  <path d="M 850 280 Q 880 270 920 280 L 970 270 L 1010 290 L 1030 340 L 1010 380 L 970 400 L 920 395 L 870 380 L 840 340 Z"
+        fill="#3D2516" opacity="0.5" stroke="#4A6B4F" stroke-width="1.5"/>
+  <text x="930" y="345" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle" opacity="0.7">Europe</text>
+
+  <!-- Middle East -->
+  <path d="M 1080 410 Q 1110 400 1140 410 L 1170 430 L 1170 470 L 1140 490 L 1100 480 L 1080 450 Z"
+        fill="#3D2516" opacity="0.5" stroke="#4A6B4F" stroke-width="1.5"/>
+
+  <!-- India -->
+  <path d="M 1280 480 Q 1310 470 1340 490 L 1360 540 L 1340 590 L 1310 600 L 1290 570 L 1275 530 Z"
+        fill="#3D2516" opacity="0.5" stroke="#4A6B4F" stroke-width="1.5"/>
+  <text x="1320" y="540" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle" opacity="0.7">India</text>
+
+  <!-- East Asia -->
+  <path d="M 1460 360 Q 1500 350 1550 370 L 1600 400 L 1620 460 L 1600 510 L 1560 530 L 1510 520 L 1470 480 L 1450 420 Z"
+        fill="#3D2516" opacity="0.5" stroke="#4A6B4F" stroke-width="1.5"/>
+  <text x="1540" y="445" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle" opacity="0.7">East Asia</text>
+
+  <!-- Pin marker template (reused via use, but inlined for portability) -->
+
+  <!-- Penderyn, Wales (2000) -->
+  <g transform="translate(900, 320)">
+    <circle r="22" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.6"/>
+    <circle r="10" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="-100" y2="-30" stroke="#B98432" stroke-width="1.5"/>
+    <text x="-110" y="-30" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="end" font-weight="700">Penderyn</text>
+    <text x="-110" y="-8" font-family="Inter, sans-serif" font-size="18" fill="#D8A858" text-anchor="end">Wales · 2000</text>
+  </g>
+
+  <!-- Kilchoman, Islay (2005) -->
+  <g transform="translate(870, 290)">
+    <circle r="20" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.6"/>
+    <circle r="9" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="-90" y2="-50" stroke="#B98432" stroke-width="1.5"/>
+    <text x="-100" y="-50" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="end" font-weight="700">Kilchoman</text>
+    <text x="-100" y="-28" font-family="Inter, sans-serif" font-size="18" fill="#D8A858" text-anchor="end">Islay, Scotland · 2005</text>
+  </g>
+
+  <!-- Lindores Abbey, Fife (2017) -->
+  <g transform="translate(910, 285)">
+    <circle r="22" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.6"/>
+    <circle r="10" fill="#C45A2C"/>
+    <line x1="0" y1="0" x2="60" y2="-60" stroke="#C45A2C" stroke-width="1.5"/>
+    <text x="65" y="-60" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="700">Lindores Abbey</text>
+    <text x="65" y="-38" font-family="Inter, sans-serif" font-size="18" fill="#C45A2C">Fife, Scotland · 2017 (his last)</text>
+  </g>
+
+  <!-- Clydeside, Glasgow (2017) -->
+  <g transform="translate(890, 305)">
+    <circle r="18" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.5"/>
+    <circle r="8" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="-50" y2="50" stroke="#B98432" stroke-width="1.5"/>
+    <text x="-55" y="65" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="end" font-weight="700">Clydeside</text>
+    <text x="-55" y="87" font-family="Inter, sans-serif" font-size="18" fill="#D8A858" text-anchor="end">Glasgow · 2017</text>
+  </g>
+
+  <!-- Annandale (2014) -->
+  <g transform="translate(900, 330)">
+    <circle r="18" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.5"/>
+    <circle r="8" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="-30" y2="80" stroke="#B98432" stroke-width="1.5"/>
+    <text x="-35" y="100" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="end" font-weight="700">Annandale</text>
+    <text x="-35" y="122" font-family="Inter, sans-serif" font-size="18" fill="#D8A858" text-anchor="end">Scotland · 2014</text>
+  </g>
+
+  <!-- Cotswolds, England (2014) -->
+  <g transform="translate(950, 365)">
+    <circle r="20" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.6"/>
+    <circle r="9" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="100" y2="50" stroke="#B98432" stroke-width="1.5"/>
+    <text x="105" y="65" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="700">Cotswolds</text>
+    <text x="105" y="87" font-family="Inter, sans-serif" font-size="18" fill="#D8A858">England · 2014</text>
+  </g>
+
+  <!-- Spirit of Yorkshire (2016) -->
+  <g transform="translate(965, 320)">
+    <circle r="18" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.5"/>
+    <circle r="8" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="80" y2="-20" stroke="#B98432" stroke-width="1.5"/>
+    <text x="85" y="-15" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="700">Spirit of Yorkshire</text>
+    <text x="85" y="7" font-family="Inter, sans-serif" font-size="18" fill="#D8A858">England · 2016</text>
+  </g>
+
+  <!-- Milk &amp; Honey, Tel Aviv (2014) -->
+  <g transform="translate(1130, 450)">
+    <circle r="20" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.6"/>
+    <circle r="9" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="-50" y2="60" stroke="#B98432" stroke-width="1.5"/>
+    <text x="-55" y="80" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="end" font-weight="700">Milk &amp; Honey</text>
+    <text x="-55" y="102" font-family="Inter, sans-serif" font-size="18" fill="#D8A858" text-anchor="end">Tel Aviv, Israel · 2014</text>
+  </g>
+
+  <!-- Amrut, Bangalore (consulting from 2004) -->
+  <g transform="translate(1320, 555)">
+    <circle r="22" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.6"/>
+    <circle r="10" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="80" y2="60" stroke="#B98432" stroke-width="1.5"/>
+    <text x="85" y="80" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="700">Amrut</text>
+    <text x="85" y="102" font-family="Inter, sans-serif" font-size="18" fill="#D8A858">Bangalore, India · advised from 2004</text>
+  </g>
+
+  <!-- Kavalan, Yilan, Taiwan (2005) -->
+  <g transform="translate(1580, 460)">
+    <circle r="24" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.7"/>
+    <circle r="12" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="80" y2="-40" stroke="#B98432" stroke-width="1.5"/>
+    <text x="85" y="-40" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="700">Kavalan</text>
+    <text x="85" y="-18" font-family="Inter, sans-serif" font-size="18" fill="#D8A858">Yilan, Taiwan · 2005</text>
+  </g>
+
+  <!-- Macaloney's, BC, Canada (2016) -->
+  <g transform="translate(260, 320)">
+    <circle r="18" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.5"/>
+    <circle r="8" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="-50" y2="60" stroke="#B98432" stroke-width="1.5"/>
+    <text x="-55" y="80" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="end" font-weight="700">Macaloney's</text>
+    <text x="-55" y="102" font-family="Inter, sans-serif" font-size="18" fill="#D8A858" text-anchor="end">Vancouver Island · 2016</text>
+  </g>
+
+  <!-- Virginia Distillery (2015) -->
+  <g transform="translate(440, 410)">
+    <circle r="18" fill="url(#dotG)" filter="url(#dsDot)" opacity="0.5"/>
+    <circle r="8" fill="#F4E9D5"/>
+    <line x1="0" y1="0" x2="50" y2="80" stroke="#B98432" stroke-width="1.5"/>
+    <text x="55" y="100" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="700">Virginia Distillery</text>
+    <text x="55" y="122" font-family="Inter, sans-serif" font-size="18" fill="#D8A858">Virginia, USA · 2015</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(120, 800)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="28" fill="#F4E9D5" font-weight="700">Legend</text>
+    <circle cx="20" cy="40" r="10" fill="#F4E9D5"/>
+    <text x="50" y="48" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5">distillery designed or significantly advised by Swan</text>
+    <circle cx="20" cy="80" r="10" fill="#C45A2C"/>
+    <text x="50" y="88" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5">commission whose first distillation took place after Swan's death (Lindores Abbey, 2017)</text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="120" y1="985" x2="1800" y2="985" stroke="#4A6B4F" stroke-width="1" opacity="0.4"/>
+  <text x="120" y="1025" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="600">
+    Six distilleries actively producing on his designs at the time of his death; several more came online after.
+  </text>
+  <text x="120" y="1055" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">
+    Selected list. Map is schematic, not geographic. Other clients included Nc'nean (Scotland), Dublin Whiskey Distillery, the London Distillery, and St George's, England.
+  </text>
+</svg>

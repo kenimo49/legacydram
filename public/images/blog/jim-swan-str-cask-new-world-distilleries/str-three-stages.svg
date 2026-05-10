@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="oakFresh" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8A858"/>
+      <stop offset="1" stop-color="#B98432"/>
+    </linearGradient>
+    <linearGradient id="oakWine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8B4A2B"/>
+      <stop offset="1" stop-color="#5A2E18"/>
+    </linearGradient>
+    <linearGradient id="oakCharcoal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B1F18"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="oakToasted" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A66838"/>
+      <stop offset="1" stop-color="#7A4A28"/>
+    </linearGradient>
+    <filter id="ds" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.6"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgG)"/>
+
+  <!-- Title -->
+  <text x="120" y="100" font-family="Georgia, serif" font-size="60" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">
+    The STR cask, in three steps
+  </text>
+  <text x="120" y="148" font-family="Inter, sans-serif" font-size="28" fill="#B98432">
+    Shaved, Toasted, Re-charred — Dr. Jim Swan's red-wine barrel rejuvenation, deployed at Penderyn from c.2004
+  </text>
+
+  <!-- Panel 1: Shave -->
+  <g transform="translate(120, 220)">
+    <text x="280" y="40" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#F4E9D5" text-anchor="middle">1. Shave</text>
+    <text x="280" y="78" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" text-anchor="middle">3–5 mm removed</text>
+
+    <!-- Stave cross-section: outer wood + wine-soaked layer + spent zone -->
+    <rect x="100" y="120" width="360" height="380" fill="url(#oakFresh)" rx="6"/>
+    <rect x="100" y="120" width="360" height="100" fill="url(#oakWine)" rx="6"/>
+    <!-- Cut zone marker (the part being shaved off) -->
+    <rect x="100" y="120" width="360" height="60" fill="#3D2516" stroke="#D8A858" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="280" y="160" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="middle" font-weight="700">cut zone</text>
+    <text x="280" y="190" font-family="Inter, sans-serif" font-size="20" fill="#D8A858" text-anchor="middle">wine-soaked spent layer</text>
+
+    <text x="280" y="280" font-family="Inter, sans-serif" font-size="22" fill="#14110E" text-anchor="middle" font-weight="700">wine-soaked oak</text>
+    <text x="280" y="310" font-family="Inter, sans-serif" font-size="20" fill="#14110E" text-anchor="middle">(retains red-fruit accent)</text>
+
+    <text x="280" y="430" font-family="Inter, sans-serif" font-size="22" fill="#14110E" text-anchor="middle" font-weight="700">fresh oak heartwood</text>
+    <text x="280" y="460" font-family="Inter, sans-serif" font-size="20" fill="#14110E" text-anchor="middle">(never extracted)</text>
+
+    <!-- Caption -->
+    <text x="280" y="560" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">mechanical removal of inner</text>
+    <text x="280" y="586" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">tannin-spent zone</text>
+    <text x="280" y="624" font-family="Inter, sans-serif" font-size="20" fill="#4A6B4F" text-anchor="middle" font-style="italic">interface preserved · internals reset</text>
+  </g>
+
+  <!-- Panel 2: Toast -->
+  <g transform="translate(720, 220)">
+    <text x="280" y="40" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#F4E9D5" text-anchor="middle">2. Toast</text>
+    <text x="280" y="78" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" text-anchor="middle">~ 180–220 °C, minutes</text>
+
+    <rect x="100" y="120" width="360" height="380" fill="url(#oakToasted)" rx="6"/>
+    <rect x="100" y="120" width="360" height="100" fill="url(#oakWine)" opacity="0.7" rx="6"/>
+
+    <!-- Chemistry annotations on wood face -->
+    <text x="280" y="170" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle" font-weight="700">retained wine-soaked layer</text>
+
+    <text x="280" y="270" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="middle" font-weight="700">controlled lignin pyrolysis</text>
+    <text x="280" y="305" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">→ vanillin (C₈H₈O₃)</text>
+    <text x="280" y="332" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">→ syringaldehyde (C₉H₁₀O₄)</text>
+
+    <text x="280" y="395" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="middle" font-weight="700">hemicellulose fragmentation</text>
+    <text x="280" y="430" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">→ pentoses, hexoses</text>
+    <text x="280" y="457" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">→ Maillard caramel notes</text>
+
+    <text x="280" y="560" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">flavour molecules</text>
+    <text x="280" y="586" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">manufactured in situ</text>
+    <text x="280" y="624" font-family="Inter, sans-serif" font-size="20" fill="#4A6B4F" text-anchor="middle" font-style="italic">cis-/trans-β-methyl-γ-octalactone freed</text>
+  </g>
+
+  <!-- Panel 3: Re-char -->
+  <g transform="translate(1320, 220)">
+    <text x="280" y="40" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#F4E9D5" text-anchor="middle">3. Re-char</text>
+    <text x="280" y="78" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" text-anchor="middle">~ 700 °C, &lt; 1 minute</text>
+
+    <rect x="100" y="120" width="360" height="380" fill="url(#oakToasted)" rx="6"/>
+    <rect x="100" y="120" width="360" height="100" fill="url(#oakWine)" opacity="0.5" rx="6"/>
+    <!-- Black charcoal layer on top -->
+    <rect x="100" y="120" width="360" height="50" fill="url(#oakCharcoal)" rx="6"/>
+    <text x="280" y="155" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle" font-weight="700">active charcoal layer</text>
+
+    <text x="280" y="220" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">~ 100s m²/g surface area</text>
+
+    <text x="280" y="320" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" text-anchor="middle" font-weight="700">adsorbs:</text>
+    <text x="280" y="355" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">sulfur compounds</text>
+    <text x="280" y="382" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">harsh phenolics</text>
+    <text x="280" y="409" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle">immature feinty esters</text>
+
+    <text x="280" y="475" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5" text-anchor="middle" font-style="italic">scrubber on top of generator</text>
+
+    <text x="280" y="560" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">a chemical filter installed at</text>
+    <text x="280" y="586" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle">the wood–spirit interface</text>
+    <text x="280" y="624" font-family="Inter, sans-serif" font-size="20" fill="#4A6B4F" text-anchor="middle" font-style="italic">extraction speed × purity</text>
+  </g>
+
+  <!-- Arrows between panels -->
+  <g transform="translate(0,0)">
+    <path d="M 600 470 L 700 470" stroke="#B98432" stroke-width="3" fill="none"/>
+    <polygon points="700,470 690,464 690,476" fill="#B98432"/>
+    <path d="M 1200 470 L 1300 470" stroke="#B98432" stroke-width="3" fill="none"/>
+    <polygon points="1300,470 1290,464 1290,476" fill="#B98432"/>
+  </g>
+
+  <!-- Footer -->
+  <line x1="120" y1="985" x2="1800" y2="985" stroke="#4A6B4F" stroke-width="1" opacity="0.4"/>
+  <text x="120" y="1025" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="600">
+    A used wine barrel becomes a young oak with red-fruit memory — speed and history at once.
+  </text>
+  <text x="120" y="1055" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">
+    Method codified by Dr. Jim Swan (1941–2017). Temperature ranges typical of medium-toast cooperage and standard re-charring.
+  </text>
+</svg>

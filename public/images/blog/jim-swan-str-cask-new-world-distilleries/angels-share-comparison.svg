@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="barCool" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4A6B4F"/>
+      <stop offset="1" stop-color="#6B8B6F"/>
+    </linearGradient>
+    <linearGradient id="barMid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B98432"/>
+      <stop offset="1" stop-color="#D8A858"/>
+    </linearGradient>
+    <linearGradient id="barHot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8B4A2B"/>
+      <stop offset="1" stop-color="#C45A2C"/>
+    </linearGradient>
+    <filter id="ds" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.6"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgG)"/>
+
+  <!-- Title -->
+  <text x="120" y="100" font-family="Georgia, serif" font-size="60" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">
+    Angel's share by region (% per year)
+  </text>
+  <text x="120" y="148" font-family="Inter, sans-serif" font-size="28" fill="#B98432">
+    Why a Kavalan cask cannot live to be twenty
+  </text>
+
+  <!-- X axis: 0 to 16% -->
+  <!-- Bar area: x from 460 to 1700 (1240 wide) -->
+  <!-- Scale: 1240 / 16% = 77.5 px per percentage point -->
+
+  <!-- Grid lines -->
+  <line x1="460" y1="220" x2="460" y2="900" stroke="#3D2516" stroke-width="2"/>
+  <line x1="770" y1="220" x2="770" y2="900" stroke="#3D2516" stroke-width="1" opacity="0.4"/>
+  <line x1="1080" y1="220" x2="1080" y2="900" stroke="#3D2516" stroke-width="1" opacity="0.4"/>
+  <line x1="1390" y1="220" x2="1390" y2="900" stroke="#3D2516" stroke-width="1" opacity="0.4"/>
+  <line x1="1700" y1="220" x2="1700" y2="900" stroke="#3D2516" stroke-width="1" opacity="0.4"/>
+
+  <!-- X axis labels -->
+  <text x="460" y="935" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">0%</text>
+  <text x="770" y="935" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">4%</text>
+  <text x="1080" y="935" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">8%</text>
+  <text x="1390" y="935" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">12%</text>
+  <text x="1700" y="935" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">16%</text>
+
+  <!-- Bars -->
+  <!-- Speyside 2% -->
+  <text x="440" y="278" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" text-anchor="end" font-weight="700">Speyside</text>
+  <text x="440" y="306" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">Scotland</text>
+  <rect x="460" y="245" width="155" height="60" fill="url(#barCool)" filter="url(#ds)" rx="4"/>
+  <text x="635" y="285" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" font-weight="700">2%</text>
+
+  <!-- Highland 2.5% -->
+  <text x="440" y="378" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" text-anchor="end" font-weight="700">Highland</text>
+  <text x="440" y="406" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">Scotland</text>
+  <rect x="460" y="345" width="194" height="60" fill="url(#barCool)" filter="url(#ds)" rx="4"/>
+  <text x="674" y="385" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" font-weight="700">2.5%</text>
+
+  <!-- Kentucky 5% -->
+  <text x="440" y="478" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" text-anchor="end" font-weight="700">Kentucky</text>
+  <text x="440" y="506" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">USA, bourbon country</text>
+  <rect x="460" y="445" width="388" height="60" fill="url(#barMid)" filter="url(#ds)" rx="4"/>
+  <text x="868" y="485" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" font-weight="700">5%</text>
+
+  <!-- Amrut Bangalore 11% -->
+  <text x="440" y="578" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" text-anchor="end" font-weight="700">Amrut</text>
+  <text x="440" y="606" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">Bangalore, India</text>
+  <rect x="460" y="545" width="853" height="60" fill="url(#barHot)" filter="url(#ds)" rx="4"/>
+  <text x="1333" y="585" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" font-weight="700">11%</text>
+
+  <!-- Kavalan baseline 12% -->
+  <text x="440" y="678" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" text-anchor="end" font-weight="700">Kavalan</text>
+  <text x="440" y="706" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">Yilan, Taiwan (baseline)</text>
+  <rect x="460" y="645" width="930" height="60" fill="url(#barHot)" filter="url(#ds)" rx="4"/>
+  <text x="1410" y="685" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" font-weight="700">12%</text>
+
+  <!-- Kavalan upper floor 15% -->
+  <text x="440" y="778" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" text-anchor="end" font-weight="700">Kavalan</text>
+  <text x="440" y="806" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="end">upper floor, 43–45 °C summer</text>
+  <rect x="460" y="745" width="1163" height="60" fill="url(#barHot)" filter="url(#ds)" rx="4"/>
+  <text x="1643" y="785" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" font-weight="700">15%</text>
+
+  <!-- Side annotations -->
+  <text x="1820" y="295" font-family="Inter, sans-serif" font-size="22" fill="#4A6B4F" text-anchor="end" font-style="italic">cool · slow extraction</text>
+  <text x="1820" y="495" font-family="Inter, sans-serif" font-size="22" fill="#B98432" text-anchor="end" font-style="italic">warm · accelerated</text>
+  <text x="1820" y="765" font-family="Inter, sans-serif" font-size="22" fill="#8B4A2B" text-anchor="end" font-style="italic">tropical · daily breathing</text>
+
+  <!-- Footer -->
+  <line x1="120" y1="985" x2="1800" y2="985" stroke="#4A6B4F" stroke-width="1" opacity="0.4"/>
+  <text x="120" y="1025" font-family="Inter, sans-serif" font-size="22" fill="#F4E9D5" font-weight="600">
+    Tropical maturation buys oak depth fast — and runs you out of liquid before patience.
+  </text>
+  <text x="120" y="1055" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">
+    Sources: distillery interviews and Whisky Magazine reporting (Kavalan reaches 18% after exceptional summers; warehouse upper floors 43–45 °C).
+  </text>
+</svg>
