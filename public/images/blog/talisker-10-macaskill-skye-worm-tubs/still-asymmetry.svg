@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="copperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8A858"/>
+      <stop offset="0.4" stop-color="#B98432"/>
+      <stop offset="1" stop-color="#6B3820"/>
+    </linearGradient>
+    <linearGradient id="copperShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6B3820"/>
+      <stop offset="0.4" stop-color="#B98432"/>
+      <stop offset="0.6" stop-color="#D8A858"/>
+      <stop offset="1" stop-color="#8B4A2B"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3D5566"/>
+      <stop offset="1" stop-color="#1F2D3A"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="120" y="92" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">
+    Talisker's asymmetric stillhouse
+  </text>
+  <text x="120" y="138" font-family="Inter, sans-serif" font-size="28" fill="#B98432">
+    2 wash + 3 spirit stills, a relic of the triple distillation abandoned in 1928
+  </text>
+
+  <!-- Stillhouse wall divider -->
+  <line x1="120" y1="780" x2="1800" y2="780" stroke="#4A6B4F" stroke-width="2" stroke-dasharray="8,8" opacity="0.6"/>
+  <text x="1800" y="772" font-family="Inter, sans-serif" font-size="18" fill="#8B9B82" text-anchor="end">stillhouse wall (lyne arms exit through here)</text>
+
+  <!-- WASH STILLS (left side, 2 stills) -->
+  <text x="120" y="240" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#F4E9D5">2 Wash Stills</text>
+  <text x="120" y="272" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">14,706 L each · inverted-U lyne arm · purifier pipe</text>
+
+  <!-- Wash still 1 -->
+  <g transform="translate(180, 360)">
+    <!-- Pot (bottom bulb) -->
+    <ellipse cx="100" cy="320" rx="90" ry="40" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+    <path d="M 10 320 Q 10 220 50 180 L 150 180 Q 190 220 190 320 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <!-- Neck -->
+    <path d="M 50 180 L 70 130 L 70 60 L 130 60 L 130 130 L 150 180 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <!-- Lyne arm: drops, then inverted U, then drops into worm tub -->
+    <!-- horizontal exit -->
+    <path d="M 130 80 L 250 80 L 250 60 L 320 60 L 320 110 L 280 110 L 280 90 L 130 90 Z" fill="url(#copperShine)"/>
+    <!-- inverted U going up and down -->
+    <path d="M 320 110 L 320 30 L 420 30 L 420 110 L 400 110 L 400 50 L 340 50 L 340 110 Z" fill="url(#copperShine)"/>
+    <!-- Purifier pipe label arrow -->
+    <line x1="290" y1="120" x2="290" y2="180" stroke="#D8A858" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="290,170 282,162 298,162" fill="#D8A858"/>
+    <text x="295" y="200" font-family="Inter, sans-serif" font-size="16" fill="#D8A858">purifier pipe</text>
+    <text x="295" y="220" font-family="Inter, sans-serif" font-size="14" fill="#8B9B82">returns heavy fraction to pot</text>
+    <!-- Drop into worm tub -->
+    <path d="M 420 30 L 460 30 L 460 360 L 440 360 L 440 50 L 420 50 Z" fill="url(#copperShine)"/>
+    <!-- Heat source -->
+    <rect x="60" y="370" width="80" height="14" fill="#4A6B4F" rx="3"/>
+  </g>
+
+  <!-- Wash still 2 -->
+  <g transform="translate(180, 360)" opacity="0.85">
+    <ellipse cx="100" cy="320" rx="90" ry="40" fill="url(#copperGrad)" filter="url(#softShadow)" transform="translate(580, 0)"/>
+    <path d="M 590 320 Q 590 220 630 180 L 730 180 Q 770 220 770 320 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <path d="M 630 180 L 650 130 L 650 60 L 710 60 L 710 130 L 730 180 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <path d="M 710 80 L 830 80 L 830 60 L 900 60 L 900 110 L 860 110 L 860 90 L 710 90 Z" fill="url(#copperShine)"/>
+    <path d="M 900 110 L 900 30 L 1000 30 L 1000 110 L 980 110 L 980 50 L 920 50 L 920 110 Z" fill="url(#copperShine)"/>
+    <path d="M 1000 30 L 1040 30 L 1040 360 L 1020 360 L 1020 50 L 1000 50 Z" fill="url(#copperShine)"/>
+    <rect x="640" y="370" width="80" height="14" fill="#4A6B4F" rx="3"/>
+  </g>
+
+  <!-- SPIRIT STILLS (right side, 3 stills) -->
+  <text x="1180" y="240" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#F4E9D5">3 Spirit Stills</text>
+  <text x="1180" y="272" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">11,024 L each · flat lyne arms · more reflux, lighter spirit</text>
+
+  <!-- Spirit still 1 -->
+  <g transform="translate(1240, 460)">
+    <ellipse cx="60" cy="220" rx="60" ry="28" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+    <path d="M 0 220 Q 0 150 30 120 L 90 120 Q 120 150 120 220 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <path d="M 30 120 L 40 80 L 40 30 L 80 30 L 80 80 L 90 120 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <!-- flat lyne arm -->
+    <path d="M 80 45 L 220 45 L 220 65 L 80 65 Z" fill="url(#copperShine)"/>
+    <!-- drop to worm tub -->
+    <path d="M 200 45 L 240 45 L 240 280 L 220 280 L 220 65 L 200 65 Z" fill="url(#copperShine)"/>
+    <rect x="30" y="252" width="60" height="12" fill="#4A6B4F" rx="3"/>
+  </g>
+
+  <!-- Spirit still 2 -->
+  <g transform="translate(1440, 460)" opacity="0.92">
+    <ellipse cx="60" cy="220" rx="60" ry="28" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+    <path d="M 0 220 Q 0 150 30 120 L 90 120 Q 120 150 120 220 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <path d="M 30 120 L 40 80 L 40 30 L 80 30 L 80 80 L 90 120 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <path d="M 80 45 L 220 45 L 220 65 L 80 65 Z" fill="url(#copperShine)"/>
+    <path d="M 200 45 L 240 45 L 240 280 L 220 280 L 220 65 L 200 65 Z" fill="url(#copperShine)"/>
+    <rect x="30" y="252" width="60" height="12" fill="#4A6B4F" rx="3"/>
+  </g>
+
+  <!-- Spirit still 3 -->
+  <g transform="translate(1640, 460)" opacity="0.84">
+    <ellipse cx="60" cy="220" rx="60" ry="28" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+    <path d="M 0 220 Q 0 150 30 120 L 90 120 Q 120 150 120 220 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <path d="M 30 120 L 40 80 L 40 30 L 80 30 L 80 80 L 90 120 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <path d="M 80 45 L 220 45 L 220 65 L 80 65 Z" fill="url(#copperShine)"/>
+    <path d="M 200 45 L 240 45 L 240 280 L 220 280 L 220 65 L 200 65 Z" fill="url(#copperShine)"/>
+    <rect x="30" y="252" width="60" height="12" fill="#4A6B4F" rx="3"/>
+  </g>
+
+  <!-- WORM TUBS (5 tubs along the bottom, outside the wall) -->
+  <text x="120" y="850" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#F4E9D5">5 Worm Tubs (outside the stillhouse, in cold water from Loch Harport)</text>
+  <text x="120" y="882" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">Copper coils survived the 1960 stillhouse fire · wooden outer tubs replaced 1997–98</text>
+
+  <!-- Worm tub 1 (wash still 1) -->
+  <rect x="600" y="910" width="120" height="100" fill="url(#waterGrad)" rx="6" filter="url(#softShadow)"/>
+  <path d="M 615 925 Q 625 945 615 965 Q 605 985 615 1005 M 645 925 Q 655 945 645 965 Q 635 985 645 1005 M 675 925 Q 685 945 675 965 Q 665 985 675 1005 M 705 925 Q 715 945 705 965 Q 695 985 705 1005" stroke="#B98432" stroke-width="3" fill="none" opacity="0.85"/>
+  <text x="660" y="1050" font-family="Inter, sans-serif" font-size="16" fill="#8B9B82" text-anchor="middle">1</text>
+
+  <!-- Worm tub 2 (wash still 2) -->
+  <rect x="1180" y="910" width="120" height="100" fill="url(#waterGrad)" rx="6" filter="url(#softShadow)"/>
+  <path d="M 1195 925 Q 1205 945 1195 965 Q 1185 985 1195 1005 M 1225 925 Q 1235 945 1225 965 Q 1215 985 1225 1005 M 1255 925 Q 1265 945 1255 965 Q 1245 985 1255 1005 M 1285 925 Q 1295 945 1285 965 Q 1275 985 1285 1005" stroke="#B98432" stroke-width="3" fill="none" opacity="0.85"/>
+  <text x="1240" y="1050" font-family="Inter, sans-serif" font-size="16" fill="#8B9B82" text-anchor="middle">2</text>
+
+  <!-- Worm tubs 3,4,5 (spirit stills) — closer together -->
+  <rect x="1460" y="910" width="90" height="100" fill="url(#waterGrad)" rx="6" filter="url(#softShadow)"/>
+  <path d="M 1473 925 Q 1483 945 1473 965 Q 1463 985 1473 1005 M 1503 925 Q 1513 945 1503 965 Q 1493 985 1503 1005 M 1533 925 Q 1543 945 1533 965 Q 1523 985 1533 1005" stroke="#B98432" stroke-width="3" fill="none" opacity="0.85"/>
+  <text x="1505" y="1050" font-family="Inter, sans-serif" font-size="16" fill="#8B9B82" text-anchor="middle">3</text>
+
+  <rect x="1570" y="910" width="90" height="100" fill="url(#waterGrad)" rx="6" filter="url(#softShadow)"/>
+  <path d="M 1583 925 Q 1593 945 1583 965 Q 1573 985 1583 1005 M 1613 925 Q 1623 945 1613 965 Q 1603 985 1613 1005 M 1643 925 Q 1653 945 1643 965 Q 1633 985 1643 1005" stroke="#B98432" stroke-width="3" fill="none" opacity="0.85"/>
+  <text x="1615" y="1050" font-family="Inter, sans-serif" font-size="16" fill="#8B9B82" text-anchor="middle">4</text>
+
+  <rect x="1680" y="910" width="90" height="100" fill="url(#waterGrad)" rx="6" filter="url(#softShadow)"/>
+  <path d="M 1693 925 Q 1703 945 1693 965 Q 1683 985 1693 1005 M 1723 925 Q 1733 945 1723 965 Q 1713 985 1723 1005 M 1753 925 Q 1763 945 1753 965 Q 1743 985 1753 1005" stroke="#B98432" stroke-width="3" fill="none" opacity="0.85"/>
+  <text x="1725" y="1050" font-family="Inter, sans-serif" font-size="16" fill="#8B9B82" text-anchor="middle">5</text>
+
+  <!-- Footer caption -->
+  <text x="960" y="1075" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82" text-anchor="middle" font-style="italic">2:3 ratio is asymmetric · the wash still purifier pipe sharpens the cut · sulfur compounds pass through with less copper contact and land in the spirit</text>
+</svg>
