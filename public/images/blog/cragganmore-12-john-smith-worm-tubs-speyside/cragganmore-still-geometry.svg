@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="copperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8A858"/>
+      <stop offset="0.4" stop-color="#B98432"/>
+      <stop offset="1" stop-color="#6B3820"/>
+    </linearGradient>
+    <linearGradient id="copperShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6B3820"/>
+      <stop offset="0.4" stop-color="#B98432"/>
+      <stop offset="0.6" stop-color="#D8A858"/>
+      <stop offset="1" stop-color="#8B4A2B"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3D5566"/>
+      <stop offset="1" stop-color="#1F2D3A"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="120" y="92" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">
+    Cragganmore's stillhouse: the choke
+  </text>
+  <text x="120" y="138" font-family="Inter, sans-serif" font-size="28" fill="#B98432">
+    Short flat-topped spirit stills · T-shaped lyne arms · worm tubs since 1869
+  </text>
+
+  <!-- Stillhouse wall divider -->
+  <line x1="120" y1="800" x2="1800" y2="800" stroke="#4A6B4F" stroke-width="2" stroke-dasharray="8,8" opacity="0.5"/>
+
+  <!-- WASH STILLS (left side, 2 stills with descending lyne arms) -->
+  <text x="120" y="240" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#F4E9D5">2 Wash Stills</text>
+  <text x="120" y="272" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">9,400 L each · sharply descending lyne arms</text>
+
+  <!-- Wash still 1 -->
+  <g transform="translate(150, 320)">
+    <!-- Pot (bottom bulb) -->
+    <ellipse cx="120" cy="380" rx="110" ry="46" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+    <path d="M 12 380 Q 12 240 60 200 L 180 200 Q 228 240 228 380 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <!-- Tall neck swan -->
+    <path d="M 60 200 L 78 130 L 78 50 L 162 50 L 162 130 L 180 200 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <!-- Top dome of wash still -->
+    <ellipse cx="120" cy="50" rx="42" ry="14" fill="url(#copperShine)"/>
+    <!-- Lyne arm: sharply descending -->
+    <path d="M 162 60 L 380 200 L 380 220 L 162 80 Z" fill="url(#copperShine)"/>
+    <!-- Drop to worm tub -->
+    <path d="M 360 200 L 410 200 L 410 440 L 380 440 L 380 220 L 360 220 Z" fill="url(#copperShine)"/>
+    <!-- Heat -->
+    <rect x="70" y="432" width="100" height="14" fill="#4A6B4F" rx="3"/>
+  </g>
+
+  <!-- Wash still 2 -->
+  <g transform="translate(610, 320)" opacity="0.92">
+    <ellipse cx="120" cy="380" rx="110" ry="46" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+    <path d="M 12 380 Q 12 240 60 200 L 180 200 Q 228 240 228 380 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <path d="M 60 200 L 78 130 L 78 50 L 162 50 L 162 130 L 180 200 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <ellipse cx="120" cy="50" rx="42" ry="14" fill="url(#copperShine)"/>
+    <path d="M 162 60 L 380 200 L 380 220 L 162 80 Z" fill="url(#copperShine)"/>
+    <path d="M 360 200 L 410 200 L 410 440 L 380 440 L 380 220 L 360 220 Z" fill="url(#copperShine)"/>
+    <rect x="70" y="432" width="100" height="14" fill="#4A6B4F" rx="3"/>
+  </g>
+
+  <!-- Wash-still callout (positioned in empty space between rows) -->
+  <text x="120" y="755" font-family="Inter, sans-serif" font-size="20" fill="#D8A858">descending lyne arms ↘ favour throughput, low reflux</text>
+
+  <!-- SPIRIT STILLS (right side, 2 stills, flat top + T-shaped lyne arm) -->
+  <text x="1080" y="240" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#F4E9D5">2 Spirit Stills</text>
+  <text x="1080" y="272" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">6,000 L each · flat tops · horizontal T-shaped lyne arms · the &quot;choke&quot;</text>
+
+  <!-- Spirit still 1 -->
+  <g transform="translate(1100, 440)">
+    <!-- Pot bottom -->
+    <ellipse cx="80" cy="240" rx="75" ry="32" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+    <path d="M 5 240 Q 5 160 35 130 L 125 130 Q 155 160 155 240 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <!-- Short neck -->
+    <path d="M 35 130 L 48 90 L 48 60 L 112 60 L 112 90 L 125 130 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <!-- FLAT TOP -->
+    <rect x="42" y="48" width="76" height="16" fill="url(#copperShine)" stroke="#D8A858" stroke-width="1"/>
+    <!-- T-shaped lyne arm: horizontal branch out of side -->
+    <rect x="118" y="52" width="140" height="12" fill="url(#copperShine)"/>
+    <!-- vertical T-junction -->
+    <rect x="252" y="42" width="14" height="32" fill="url(#copperShine)"/>
+    <!-- horizontal continuation -->
+    <rect x="252" y="52" width="120" height="12" fill="url(#copperShine)"/>
+    <!-- drop to worm tub -->
+    <path d="M 360 52 L 388 52 L 388 280 L 372 280 L 372 64 L 360 64 Z" fill="url(#copperShine)"/>
+    <!-- Steam coil base -->
+    <rect x="35" y="270" width="90" height="14" fill="#4A6B4F" rx="3"/>
+  </g>
+
+  <!-- Spirit still 2 -->
+  <g transform="translate(1480, 440)" opacity="0.9">
+    <ellipse cx="80" cy="240" rx="75" ry="32" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+    <path d="M 5 240 Q 5 160 35 130 L 125 130 Q 155 160 155 240 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <path d="M 35 130 L 48 90 L 48 60 L 112 60 L 112 90 L 125 130 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+    <rect x="42" y="48" width="76" height="16" fill="url(#copperShine)" stroke="#D8A858" stroke-width="1"/>
+    <rect x="118" y="52" width="140" height="12" fill="url(#copperShine)"/>
+    <rect x="252" y="42" width="14" height="32" fill="url(#copperShine)"/>
+    <rect x="252" y="52" width="120" height="12" fill="url(#copperShine)"/>
+    <path d="M 360 52 L 388 52 L 388 280 L 372 280 L 372 64 L 360 64 Z" fill="url(#copperShine)"/>
+    <rect x="35" y="270" width="90" height="14" fill="#4A6B4F" rx="3"/>
+  </g>
+
+  <!-- Spirit-still callouts (positioned below in empty space) -->
+  <text x="1080" y="730" font-family="Inter, sans-serif" font-size="20" fill="#D8A858">flat top: 1869 roof constraint, replicated in 1964 expansion</text>
+  <text x="1080" y="758" font-family="Inter, sans-serif" font-size="20" fill="#D8A858">T-lyne: horizontal sideways branch, very low reflux,</text>
+  <text x="1080" y="782" font-family="Inter, sans-serif" font-size="20" fill="#D8A858">heavy congeners pass through to the worm tub</text>
+
+  <!-- WORM TUBS (outside the wall) -->
+  <text x="120" y="855" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#F4E9D5">2 Worm Tubs · outside the stillhouse</text>
+  <text x="120" y="887" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">Copper coil in cold open-air water · ~5% of the copper surface area of a shell-and-tube condenser · sulfur survives</text>
+
+  <!-- Worm tub 1 (wash) -->
+  <rect x="430" y="920" width="170" height="100" fill="url(#waterGrad)" rx="6" filter="url(#softShadow)"/>
+  <path d="M 450 938 Q 462 958 450 978 Q 438 998 450 1018 M 490 938 Q 502 958 490 978 Q 478 998 490 1018 M 530 938 Q 542 958 530 978 Q 518 998 530 1018 M 570 938 Q 582 958 570 978 Q 558 998 570 1018" stroke="#B98432" stroke-width="3" fill="none" opacity="0.85"/>
+  <text x="515" y="1042" font-family="Inter, sans-serif" font-size="18" fill="#8B9B82" text-anchor="middle">wash-still worm tub</text>
+
+  <!-- Worm tub 2 (spirit) -->
+  <rect x="1380" y="920" width="170" height="100" fill="url(#waterGrad)" rx="6" filter="url(#softShadow)"/>
+  <path d="M 1400 938 Q 1412 958 1400 978 Q 1388 998 1400 1018 M 1440 938 Q 1452 958 1440 978 Q 1428 998 1440 1018 M 1480 938 Q 1492 958 1480 978 Q 1468 998 1480 1018 M 1520 938 Q 1532 958 1520 978 Q 1508 998 1520 1018" stroke="#B98432" stroke-width="3" fill="none" opacity="0.85"/>
+  <text x="1465" y="1042" font-family="Inter, sans-serif" font-size="18" fill="#8B9B82" text-anchor="middle">spirit-still worm tub</text>
+
+  <!-- Footer caption -->
+  <text x="960" y="1070" font-family="Inter, sans-serif" font-size="18" fill="#8B9B82" text-anchor="middle" font-style="italic">Two cumulative engineering decisions — flat top + T-lyne, and worm tubs — that John Smith built in 1869 and four owners since 1927 have declined to undo.</text>
+</svg>
