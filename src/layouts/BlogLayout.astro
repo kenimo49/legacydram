@@ -185,6 +185,33 @@ const articleJsonLd = [blogPostingJsonLd, breadcrumbJsonLd];
         margin: 1.5rem 0;
         font-style: italic;
       }
+      .prose .callout-tldr,
+      .prose :global(.callout-tldr) {
+        background: rgba(185, 132, 50, 0.08);
+        border: 1px solid rgba(185, 132, 50, 0.35);
+        border-left: 4px solid var(--accent-primary);
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        margin: 2rem 0;
+        font-size: 0.95rem;
+      }
+      .prose .callout-tldr > :first-child,
+      .prose :global(.callout-tldr) > :first-child {
+        margin-top: 0;
+      }
+      .prose .callout-tldr > :last-child,
+      .prose :global(.callout-tldr) > :last-child {
+        margin-bottom: 0;
+      }
+      .prose .callout-tldr-title,
+      .prose :global(.callout-tldr-title) {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--accent-primary);
+        margin: 0 0 0.5rem;
+        letter-spacing: 0.02em;
+      }
       .prose ul, .prose ol {
         padding-left: 1.5rem;
         margin: 1rem 0;

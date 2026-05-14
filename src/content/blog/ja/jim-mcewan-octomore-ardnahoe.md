@@ -16,13 +16,13 @@ canonical_url: "https://legacydram.com/ja/blog/jim-mcewan-octomore-ardnahoe/"
 
 シリーズを世に出した男の名前は、**Jim McEwan**。
 
-:::message
-**3分で読む人向けの要約**
+<aside class="callout-tldr">
+<p class="callout-tldr-title">3分で読む人向けの要約</p>
 
 - **この記事の結論**: Octomore の 131ppm は「数字で売る」一回性の判断であり、本人は次の蒸留所(Ardnahoe)では同じ路線を選ばなかった。引退後の判断は現役時代の判断より雄弁になる。
 - **登場する主な用語**: ppm（フェノール量の単位）/ cooper（樽職人）/ peated malting（ピート燻製の麦芽工程）/ spirit's hearts（蒸留中盤の取り分）
 - **論点**: ①Octomore は「テロワール」を掲げる蒸留所が本土産麦芽を使う矛盾 / ②麦芽段階の ppm と瓶の中の ppm は別物（約97%が蒸留中に失われる） / ③Ardnahoe では中庸な ppm に戻した
-:::
+</aside>
 
 ## 樽職人として入った男
 

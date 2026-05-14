@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build && node scripts/generate-llms.mjs",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "node scripts/lint-blog.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
