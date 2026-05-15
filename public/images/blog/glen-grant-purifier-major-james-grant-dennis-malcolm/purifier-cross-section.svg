@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1612"/>
+      <stop offset="1" stop-color="#14110E"/>
+    </linearGradient>
+    <linearGradient id="copperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B98432"/>
+      <stop offset="0.5" stop-color="#8B4A2B"/>
+      <stop offset="1" stop-color="#6B3820"/>
+    </linearGradient>
+    <linearGradient id="copperShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6B3820"/>
+      <stop offset="0.4" stop-color="#B98432"/>
+      <stop offset="0.6" stop-color="#D8A858"/>
+      <stop offset="1" stop-color="#8B4A2B"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5A8FA5"/>
+      <stop offset="1" stop-color="#3A6F85"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="120" y="90" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#F4E9D5" letter-spacing="-0.5">
+    Glen Grant spirit still: the 1872 purifier
+  </text>
+  <text x="120" y="132" font-family="Inter, sans-serif" font-size="26" fill="#B98432">
+    Major James Grant&apos;s bolt-on retrofit, fitted to every still in the house
+  </text>
+
+  <!-- Still pot (bottom bulb) - onion shape, broader than Glenmorangie -->
+  <ellipse cx="600" cy="870" rx="240" ry="75" fill="url(#copperGrad)" filter="url(#softShadow)"/>
+  <path d="M 360 870 Q 360 700 430 640 L 770 640 Q 840 700 840 870 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+
+  <!-- Heat source -->
+  <rect x="540" y="945" width="120" height="20" fill="#4A6B4F" rx="4"/>
+  <text x="600" y="998" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82" text-anchor="middle">heat source (steam coil)</text>
+
+  <!-- Neck (tall narrow) -->
+  <path d="M 430 640 L 470 570 L 470 270 L 730 270 L 730 570 L 770 640 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+  <line x1="470" y1="570" x2="730" y2="570" stroke="#3D2516" stroke-width="2"/>
+
+  <!-- Lyne arm exiting the neck horizontally -->
+  <path d="M 730 290 L 730 340 L 1080 340 L 1080 290 Z" fill="url(#copperShine)" filter="url(#softShadow)"/>
+
+  <!-- THE PURIFIER: water-cooled jacket around section of lyne arm -->
+  <rect x="900" y="260" width="170" height="120" fill="url(#waterGrad)" filter="url(#softShadow)" rx="8" opacity="0.92"/>
+  <!-- water flow indicators inside jacket -->
+  <g stroke="#A3D0E0" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M 915 280 Q 935 295 915 310 T 915 340 T 915 370"/>
+    <path d="M 945 280 Q 965 295 945 310 T 945 340 T 945 370"/>
+    <path d="M 975 280 Q 995 295 975 310 T 975 340 T 975 370"/>
+    <path d="M 1005 280 Q 1025 295 1005 310 T 1005 340 T 1005 370"/>
+    <path d="M 1035 280 Q 1055 295 1035 310 T 1035 340 T 1035 370"/>
+  </g>
+  <!-- water in/out fittings -->
+  <rect x="892" y="265" width="14" height="22" fill="#3A6F85"/>
+  <rect x="892" y="353" width="14" height="22" fill="#3A6F85"/>
+  <text x="850" y="278" font-family="Inter, sans-serif" font-size="18" fill="#A3D0E0" text-anchor="end">cold</text>
+  <text x="850" y="372" font-family="Inter, sans-serif" font-size="18" fill="#A3D0E0" text-anchor="end">water</text>
+
+  <!-- Purifier return pipe: from bottom of purifier section back to still pot -->
+  <path d="M 985 380 L 985 480 Q 985 530 750 530 L 600 530 Q 470 530 470 600" fill="none" stroke="#8B4A2B" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 985 380 L 985 480 Q 985 530 750 530 L 600 530 Q 470 530 470 600" fill="none" stroke="#B98432" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Condenser -->
+  <rect x="1100" y="290" width="220" height="100" fill="#6B3820" rx="6" filter="url(#softShadow)"/>
+  <rect x="1105" y="295" width="210" height="90" fill="none" stroke="#B98432" stroke-width="2" rx="4"/>
+  <text x="1210" y="350" font-family="Inter, sans-serif" font-size="26" fill="#F4E9D5" text-anchor="middle" font-weight="600">condenser</text>
+
+  <!-- Rising vapour arrows inside neck -->
+  <g stroke="#D8A858" stroke-width="3" fill="#D8A858" opacity="0.85">
+    <line x1="540" y1="540" x2="540" y2="320" stroke-linecap="round"/>
+    <polygon points="540,310 532,325 548,325"/>
+    <line x1="600" y1="560" x2="600" y2="300" stroke-linecap="round"/>
+    <polygon points="600,290 592,305 608,305"/>
+    <line x1="660" y1="540" x2="660" y2="320" stroke-linecap="round"/>
+    <polygon points="660,310 652,325 668,325"/>
+  </g>
+
+  <!-- Heavy condensate falling back through purifier return pipe -->
+  <g stroke="#8B4A2B" stroke-width="4" fill="#8B4A2B">
+    <line x1="985" y1="395" x2="985" y2="465" stroke-linecap="round"/>
+    <polygon points="985,475 977,460 993,460"/>
+    <line x1="730" y1="525" x2="630" y2="525" stroke-linecap="round"/>
+    <polygon points="620,525 635,517 635,533"/>
+  </g>
+
+  <!-- Light vapour continuing past purifier to condenser -->
+  <g stroke="#D8A858" stroke-width="3" fill="#D8A858">
+    <line x1="780" y1="315" x2="880" y2="315" stroke-linecap="round"/>
+    <line x1="1080" y1="315" x2="1180" y2="315" stroke-linecap="round"/>
+    <polygon points="1180,315 1166,307 1166,323"/>
+  </g>
+
+  <!-- Annotations -->
+  <!-- Purifier label -->
+  <text x="985" y="225" font-family="Inter, sans-serif" font-size="34" fill="#5A8FA5" font-weight="700" text-anchor="middle">PURIFIER</text>
+  <text x="985" y="255" font-family="Inter, sans-serif" font-size="20" fill="#A3D0E0" text-anchor="middle">water-cooled jacket on lyne arm</text>
+
+  <!-- Heavy compounds annotation -->
+  <text x="350" y="610" font-family="Inter, sans-serif" font-size="26" fill="#B98432" font-weight="700">heavy fraction</text>
+  <text x="350" y="642" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5">fusel oils, long-chain esters,</text>
+  <text x="350" y="668" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5">sulfur compounds — back to pot</text>
+
+  <!-- Light vapour annotation -->
+  <text x="1430" y="285" font-family="Inter, sans-serif" font-size="28" fill="#D8A858" font-weight="700">to condenser</text>
+  <text x="1430" y="318" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5">light esters survive</text>
+  <text x="1430" y="346" font-family="Inter, sans-serif" font-size="20" fill="#F4E9D5">pear, apple, citrus, blossom</text>
+
+  <!-- Rising vapour annotation -->
+  <text x="270" y="430" font-family="Inter, sans-serif" font-size="22" fill="#D8A858" font-weight="600">rising vapour</text>
+  <line x1="380" y1="425" x2="470" y2="415" stroke="#D8A858" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Reflux equation -->
+  <rect x="1300" y="780" width="500" height="220" fill="#1f1a16" stroke="#B98432" stroke-width="2" rx="8"/>
+  <text x="1326" y="822" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">what the purifier does, in one line</text>
+  <text x="1326" y="888" font-family="Georgia, serif" font-size="48" fill="#F4E9D5" font-weight="700">R goes up.</text>
+  <text x="1326" y="932" font-family="Inter, sans-serif" font-size="20" fill="#B98432">cold zone in vapour path  →  heavy</text>
+  <text x="1326" y="960" font-family="Inter, sans-serif" font-size="20" fill="#B98432">condenses out and falls back  →</text>
+  <text x="1326" y="988" font-family="Inter, sans-serif" font-size="20" fill="#B98432">only the lightest reaches the spirit safe</text>
+
+  <!-- Cost line -->
+  <rect x="120" y="780" width="540" height="100" fill="#1f1a16" stroke="#4A6B4F" stroke-width="2" rx="8"/>
+  <text x="148" y="818" font-family="Inter, sans-serif" font-size="22" fill="#8B9B82">capital cost vs new still</text>
+  <text x="148" y="862" font-family="Georgia, serif" font-size="36" fill="#F4E9D5" font-weight="700">≈ 1/10. retrofit, not rebuild.</text>
+
+  <!-- Person + year footer -->
+  <text x="120" y="1055" font-family="Inter, sans-serif" font-size="20" fill="#8B9B82">
+    Retrofit: Major James Grant, 1872. Stewardship: Dennis Malcolm OBE (Master Distiller, 1961–2024). Drawing not to scale.
+  </text>
+</svg>
